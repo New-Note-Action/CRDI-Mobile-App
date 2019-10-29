@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
 class TestingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
@@ -31,73 +32,79 @@ class TestingPage extends StatelessWidget {
       home: Scaffold(
 
         body: Column(
-                children: <Widget>[
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 1,
-                      height: MediaQuery.of(context).size.height * 0.4,
-                      child: Text('Text Bar'),
-                      alignment: Alignment(0.0, 0.0),
-                      color: Colors.indigoAccent.shade100,
-                    ),
+            children: <Widget>[
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 1,
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: Text('Text Bar', style: TextStyle(color: Colors.white)),
+                    alignment: Alignment(0.0, 0.0),
+                    color: Colors.black87,
+                  ),
 
 
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.333,
-                      height: MediaQuery.of(context).size.height * 0.6,
-                      child: Text('button'),
-                      alignment: Alignment(0.0, 0.0),
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          top: BorderSide(width: 1.0, color: Colors.black),
-                          left: BorderSide(width: 1.0, color: Colors.black),
-                          right: BorderSide(width: 1.0, color: Colors.black),
-                          bottom: BorderSide(width: 1.0, color: Colors.black),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.333,
-                      height: MediaQuery.of(context).size.height * 0.6,
-                      child: Text('joystick'),
-                      alignment: Alignment(0.0, 0.0),
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          top: BorderSide(width: 1.0, color: Colors.black),
-                          left: BorderSide(width: 1.0, color: Colors.black),
-                          right: BorderSide(width: 1.0, color: Colors.black),
-                          bottom: BorderSide(width: 1.0, color: Colors.black),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.333,
-                      height: MediaQuery.of(context).size.height * 0.6,
-                      child: Text('slider'),
-                      alignment: Alignment(0.0, 0.0),
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          top: BorderSide(width: 1.0, color: Colors.black),
-                          left: BorderSide(width: 1.0, color: Colors.black),
-                          right: BorderSide(width: 1.0, color: Colors.black),
-                          bottom: BorderSide(width: 1.0, color: Colors.black),
-                        ),
-                      ),
-                    ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.333,
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: Text('Button', style: TextStyle(color: Colors.white)),
+                    alignment: Alignment(0.0, 0.0),
 
-                  ],
-                ),
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: Border(
+                        top: BorderSide(width: 1.0, color: Colors.black),
+                        left: BorderSide(width: 1.0, color: Colors.black),
+                        right: BorderSide(width: 1.0, color: Colors.black),
+                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.333,
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: Text('Joystick', style: TextStyle(color: Colors.white)),
+                    alignment: Alignment(0.0, 0.0),
+
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: Border(
+                        top: BorderSide(width: 1.0, color: Colors.black),
+                        left: BorderSide(width: 1.0, color: Colors.black),
+                        right: BorderSide(width: 1.0, color: Colors.black),
+                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.333,
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: Text('Slider', style: TextStyle(color: Colors.white)),
+                    alignment: Alignment(0.0, 0.0),
+
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: Border(
+                        top: BorderSide(width: 1.0, color: Colors.black),
+                        left: BorderSide(width: 1.0, color: Colors.black),
+                        right: BorderSide(width: 1.0, color: Colors.black),
+                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
             ]
-            ),
-          ),
-        );
+        ),
+      ),
+    );
   }
 }
 
