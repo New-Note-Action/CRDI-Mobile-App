@@ -1,34 +1,53 @@
 import 'package:flutter/material.dart';
 
-//********************************
-//SUBJECT TO CHANGE OVER THE WEEKEND OF 10/25-10/28
-//********************************
 class BottomNavBar extends StatelessWidget with PreferredSizeWidget {
+  final bool includePlayButton;
+  BottomNavBar(this.includePlayButton);
+
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: Colors.blueGrey[100],
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.arrow_back),
-          title: Text('Go Back'),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.home,
-            color: Colors.red,
+    if (includePlayButton) {
+      return BottomNavigationBar(
+        backgroundColor: Colors.blueGrey[100],
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_back),
+            title: Text('Go Back'),
           ),
-          title: Text('Home'),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.play_arrow,
-            color: Colors.green,
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.red,
+            ),
+            title: Text('Home'),
           ),
-          title: Text('Begin'),
-        )
-      ],
-    );
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.play_arrow,
+              color: Colors.green,
+            ),
+            title: Text('Begin'),
+          )
+        ],
+      );
+    } else {
+      return BottomNavigationBar(
+        backgroundColor: Colors.blueGrey[100],
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_back),
+            title: Text('Go Back'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.red,
+            ),
+            title: Text('Home'),
+          ),
+        ],
+      );
+    }
   }
 
   @override
