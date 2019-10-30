@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_names.dart';
 import 'package:crdi_mobile_app/core/config.dart';
+import 'package:crdi_mobile_app/profile_select.dart';
 import 'package:flutter/widgets.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -37,9 +38,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case ProfileSelect:
       portraitMode();
       return MaterialPageRoute(
-        builder: (context) => UndefinedView(
-          featureName: settings.name,
-        ),
+        builder: (context) => SelectProfile(),
       );
     case Ready:
       landscapeMode();
