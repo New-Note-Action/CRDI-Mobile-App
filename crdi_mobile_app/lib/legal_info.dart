@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:package_info/package_info.dart';
 
 class LegalInfoClass {
-  static final String _copyrightNotice = 'Copyright (C) 2019 "New Note Action" (John Elik, Cole Howard, Tyler Tichler, Sean Pohl)';
+  static final String _copyrightNotice = 'Copyright (C) 2019 "New Note Action" (John Elik, Cole Howard, Sean Pohl, Tyler Tichler)';
   static final String _licenseDetails = '\n\n'
     'This program is free software: you can redistribute it and/or modify' '\n'
     'it under the terms of the GNU General Public License as published by' '\n'
