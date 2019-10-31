@@ -3,30 +3,14 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new TestingPage(),
-    );
-
-  }
-}
-
-
+//import 'package:flutter/services.dart';
+//import 'package:crdi_mobile_app/route_names.dart';
+//import 'package:crdi_mobile_app/core/config.dart';
 
 class TestingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
+
     return MaterialApp(
       title: 'Testing Page',
       home: Scaffold(
@@ -53,8 +37,24 @@ class TestingPage extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width * 0.333,
                     height: MediaQuery.of(context).size.height * 0.6,
-                    child: Text('Button', style: TextStyle(color: Colors.white)),
-                    alignment: Alignment(0.0, 0.0),
+                    child:
+                    Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Spacer(),
+                          IconButton(
+                            alignment: Alignment(0.0, 0.0),
+                            icon: Icon(Icons.android),
+                            //color: Colors.white,
+                            onPressed: () {
+                              print("I was Pressed");
+                            },
+                          ),
+                          Spacer(),
+                          Text('Tension\n', style: TextStyle(color: Colors.white)),
+                        ]),
+
 
                     decoration: const BoxDecoration(
                       color: Colors.grey,
@@ -65,9 +65,11 @@ class TestingPage extends StatelessWidget {
                         bottom: BorderSide(width: 1.0, color: Colors.black),
                       ),
                     ),
+
                   ),
+
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.333,
+                    width: MediaQuery.of(context).size.width * 0.334,
                     height: MediaQuery.of(context).size.height * 0.6,
                     child: Text('Joystick', style: TextStyle(color: Colors.white)),
                     alignment: Alignment(0.0, 0.0),
