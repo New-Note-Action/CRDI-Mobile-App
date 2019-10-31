@@ -53,10 +53,7 @@ flutter:
     # <https://commons.wikimedia.org/wiki/File:Electronic-Component-Potentiometer.jpg>
     # Image released into Public Domain, thus no attribution required (add it later though).
     - assets/Electronic-Component-Potentiometer.png
-<<<<<<< HEAD
     - assets/howtouse.md
-=======
->>>>>>> 98308105a9f2b816dc34cf342cb58fa0a99fdd44
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
