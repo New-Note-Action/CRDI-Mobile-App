@@ -1,14 +1,61 @@
 import 'package:flutter/material.dart';
 
-class BottomNavBar extends StatelessWidget with PreferredSizeWidget {
+class BottomNavBar extends StatelessWidget {
   final bool includePlayButton;
+  double iconSizeOnScreen = 35;
   BottomNavBar(this.includePlayButton);
 
   @override
   Widget build(BuildContext context) {
     if (includePlayButton) {
-      return BottomNavigationBar(
-        backgroundColor: Colors.blueGrey[100],
+      return BottomAppBar(
+        child: Row(
+          children: <Widget>[
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.blue,
+                  ),
+                ),
+                Text('Go Back')
+              ],
+            ),
+            Spacer(),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(
+                    Icons.home,
+                    color: Colors.red,
+                  ),
+                ),
+                Text('Home'),
+              ],
+            ),
+            Spacer(),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(
+                    Icons.play_arrow,
+                    color: Colors.grey,
+                  ),
+                ),
+                Text('Begin'),
+              ],
+            ),
+          ],
+        ),
+
+        /*backgroundColor: Colors.blueGrey[100],
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.arrow_back),
@@ -24,15 +71,48 @@ class BottomNavBar extends StatelessWidget with PreferredSizeWidget {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.play_arrow,
-              color: Colors.green,
+              color: Colors.grey,
             ),
             title: Text('Begin'),
           )
-        ],
+        ],*/
       );
     } else {
-      return BottomNavigationBar(
-        backgroundColor: Colors.blueGrey[100],
+      return BottomAppBar(
+        child: Row(
+          children: <Widget>[
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.blue,
+                  ),
+                ),
+                Text('Go Back')
+              ],
+            ),
+            Spacer(),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(
+                    Icons.home,
+                    color: Colors.red,
+                  ),
+                ),
+                Text('Home'),
+              ],
+            )
+          ],
+        ),
+      );
+
+      /*backgroundColor: Colors.blueGrey[100],
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.arrow_back),
@@ -45,11 +125,7 @@ class BottomNavBar extends StatelessWidget with PreferredSizeWidget {
             ),
             title: Text('Home'),
           ),
-        ],
-      );
+        ]*/
     }
   }
-
-  @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
