@@ -9,7 +9,6 @@ import 'package:flutter/widgets.dart';
 class SelectProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    portraitMode();
     return SafeArea(
       child: Scaffold(
         appBar: TopAppBar('Profile Select'),
