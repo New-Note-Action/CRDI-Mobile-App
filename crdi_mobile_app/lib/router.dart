@@ -3,6 +3,7 @@ import 'package:crdi_mobile_app/route_names.dart';
 import 'package:crdi_mobile_app/core/config.dart';
 import 'package:crdi_mobile_app/profile_select.dart';
 import 'package:flutter/widgets.dart';
+import 'package:crdi_mobile_app/ready.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   //TODO Add paths to actual Features
@@ -43,8 +44,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case Ready:
       landscapeMode();
       return MaterialPageRoute(
-        builder: (context) => UndefinedView(
-          featureName: settings.name,
+        builder: (context) => readyPage(
+
         ),
       );
     case Testing:

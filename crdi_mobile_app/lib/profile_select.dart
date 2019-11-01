@@ -11,7 +11,7 @@ class SelectProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: TopAppBar('Profile Select'),
+        appBar: TopAppBar('Profile Select', true),
         drawer: DrawerSection(null),
         body: ProfileDropDown(),
         bottomNavigationBar: BottomNavBar(true),
