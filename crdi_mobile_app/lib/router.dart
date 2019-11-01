@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_names.dart';
 import 'package:crdi_mobile_app/core/config.dart';
+import 'package:crdi_mobile_app/core/topbar.dart';
+import 'package:crdi_mobile_app/core/bottombar.dart';
 import 'package:crdi_mobile_app/profile_select.dart';
-import 'package:flutter/widgets.dart';
 import 'package:crdi_mobile_app/ready.dart';
+import 'package:crdi_mobile_app/export.dart';
+import 'package:crdi_mobile_app/how_to.dart';
+import 'package:crdi_mobile_app/legal_info.dart';
+import 'package:crdi_mobile_app/main_menu.dart';
+import 'package:crdi_mobile_app/testpage.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   //TODO Add paths to actual Features
@@ -11,9 +17,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case MainMenu:
       portraitMode();
       return MaterialPageRoute(
-        builder: (context) => UndefinedView(
-          featureName: settings.name,
-        ),
+        builder: (context) => MainMenuClass(),
       );
     case Export:
       portraitMode();
@@ -25,9 +29,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case HowTo:
       portraitMode();
       return MaterialPageRoute(
-        builder: (context) => UndefinedView(
-          featureName: settings.name,
-        ),
+        builder: (context) => HowToClass(),
       );
     case Legal:
       portraitMode();
@@ -44,16 +46,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case Ready:
       landscapeMode();
       return MaterialPageRoute(
-        builder: (context) => readyPage(
-
-        ),
+        builder: (context) => readyPage(),
       );
     case Testing:
       landscapeMode();
       return MaterialPageRoute(
-        builder: (context) => UndefinedView(
-          featureName: settings.name,
-        ),
+        builder: (context) => TestingPage(),
       );
     default:
       portraitMode();
@@ -75,9 +73,7 @@ class UndefinedView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text('Page Not Found'),
-        ),
+        appBar: TopAppBar('Undefined Route', false),
         body: Center(
           child: Text(
             'The \'$featureName\' feature has not yet been implemented',
@@ -89,7 +85,7 @@ class UndefinedView extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        bottomNavigationBar: BottomAppBar(),
+        bottomNavigationBar: BottomNavBar(false),
       ),
     );
   }
