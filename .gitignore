@@ -1,3 +1,6 @@
+# New Note Action Specific
+test.dart
+
 # Miscellaneous
 *.class
 *.log
@@ -8,8 +11,6 @@
 .buildlog/
 .history
 .svn/
-.idea/
-test.dart
 
 # IntelliJ related
 *.iml
