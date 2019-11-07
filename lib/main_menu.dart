@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'legal_info.dart';
+import 'package:crdi_mobile_app/route_names.dart';
 
 class MainMenuClass extends StatelessWidget {
   static BuildContext _theContext;
   final List<ListTile> _mainMenuItems = <ListTile>[
     ListTile(
       title: Text("New Test"),
+      onTap: () => Navigator.pushNamed(_theContext, ProfileSelect),
     ),
     ListTile(
       title: Text("Export Results"),
+      onTap: () => Navigator.pushNamed(_theContext, Export),
     ),
   ];
 
