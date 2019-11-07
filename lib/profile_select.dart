@@ -12,9 +12,9 @@ class SelectProfile extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: TopAppBar('Profile Select', true),
-        drawer: DrawerSection(null),
+        drawer: DrawerSection(),
         body: ProfileDropDown(),
-        bottomNavigationBar: BottomNavBar(true),
+        bottomNavigationBar: BottomNavBar(false),
       ),
     );
   }

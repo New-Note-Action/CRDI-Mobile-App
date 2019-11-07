@@ -1,5 +1,7 @@
+import 'package:crdi_mobile_app/route_names.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class BottomNavBar extends StatelessWidget {
   final bool includePlayButton;
   double iconSizeOnScreen = 35;
@@ -20,6 +22,11 @@ class BottomNavBar extends StatelessWidget {
                     Icons.arrow_back,
                     color: Colors.blue,
                   ),
+                  onPressed: () {
+                    if (Navigator.canPop(context)) {
+                      Navigator.pop(context);
+                    }
+                  },
                 ),
                 Text('Go Back')
               ],
@@ -34,6 +41,10 @@ class BottomNavBar extends StatelessWidget {
                     Icons.home,
                     color: Colors.red,
                   ),
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, MainMenu, (_) => false);
+                  },
                 ),
                 Text('Home'),
               ],
@@ -48,34 +59,13 @@ class BottomNavBar extends StatelessWidget {
                     Icons.play_arrow,
                     color: Colors.grey,
                   ),
+                  onPressed: null,
                 ),
                 Text('Begin'),
               ],
             ),
           ],
         ),
-
-        /*backgroundColor: Colors.blueGrey[100],
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_back),
-            title: Text('Go Back'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.red,
-            ),
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.play_arrow,
-              color: Colors.grey,
-            ),
-            title: Text('Begin'),
-          )
-        ],*/
       );
     } else {
       return BottomAppBar(
@@ -90,6 +80,9 @@ class BottomNavBar extends StatelessWidget {
                     Icons.arrow_back,
                     color: Colors.blue,
                   ),
+                  onPressed: () {
+                    if (Navigator.canPop(context)) Navigator.pop(context);
+                  },
                 ),
                 Text('Go Back')
               ],
@@ -104,28 +97,18 @@ class BottomNavBar extends StatelessWidget {
                     Icons.home,
                     color: Colors.red,
                   ),
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, MainMenu, (_) => false);
+                  },
                 ),
                 Text('Home'),
               ],
-            )
+            ),
+            Spacer(),
           ],
         ),
       );
-
-      /*backgroundColor: Colors.blueGrey[100],
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_back),
-            title: Text('Go Back'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.red,
-            ),
-            title: Text('Home'),
-          ),
-        ]*/
     }
   }
 }
