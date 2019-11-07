@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:control_pad/control_pad.dart';
-//import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_names.dart';
 //import 'package:crdi_mobile_app/core/config.dart';
 
 class SliderExample extends StatefulWidget {
@@ -13,7 +13,7 @@ class SliderExample extends StatefulWidget {
 
 
 class TestingPage extends StatelessWidget {
-  int _value = 6;
+  int _value = 1;
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
@@ -72,6 +72,7 @@ class TestingPage extends StatelessWidget {
 
                         iconSize: MediaQuery.of(context).size.width * 0.1,
                         onPressed: () {
+                          _showDialog(context);
                           print("Pause Button Hit");
                         },
 
@@ -195,7 +196,6 @@ class TestingPage extends StatelessWidget {
 
 class _SliderExampleState extends State {
   int _value = 6;
-
   @override
   Widget build(BuildContext context) {
               return
@@ -221,4 +221,34 @@ class _SliderExampleState extends State {
   }
 }
 
+void _showDialog(context) {
+  // flutter defined function
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      // return object of type Dialog
+      return AlertDialog(
+        title: new Text("Test Paused"),
+        //content: new Text("Resume Or End"),
+        actions: <Widget>[
+          // usually buttons at the bottom of the dialog
+          new FlatButton(
+            child: new Text("Resume"),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          new FlatButton(
+            child: new Text("End"),
+            onPressed: () {
+              Navigator.of(context).pushNamedAndRemoveUntil(MainMenu, (_) => false);
+            },
+          ),
+
+
+        ],
+      );
+    },
+  );
+}
 
