@@ -11,17 +11,6 @@ class MainMenuClass extends StatelessWidget {
     ListTile(
       title: Text("Export Results"),
     ),
-
-    //"View Licenses" button present on About dialog.
-    ListTile(
-      title: Text("Legal"),
-      onTap: () => LegalInfoClass.renderLicensePage(context: _theContext),
-    ),
-
-    ListTile(
-      title: Text("About"),
-      onTap: () => LegalInfoClass.renderAboutDialog(context: _theContext),
-    ),
   ];
 
   @override
