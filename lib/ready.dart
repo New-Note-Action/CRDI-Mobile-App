@@ -11,9 +11,8 @@ class readyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-        title: 'Testing Page',
-        home: Scaffold(
+    return SafeArea(
+        child: Scaffold(
           body: Container(
             color: Colors.black,
             child: Column(children: <Widget>[

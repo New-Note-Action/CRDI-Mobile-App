@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  control_pad: ^1.0.0+2
   flutter:
     sdk: flutter
 
@@ -55,6 +56,7 @@ flutter:
     # Image released into Public Domain, thus no attribution required (add it later though).
     - assets/Electronic-Component-Potentiometer.png
     - assets/howtouse.md
+    - LICENSE_LicenseNotice
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
