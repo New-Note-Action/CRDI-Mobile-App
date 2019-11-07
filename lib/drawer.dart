@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:vibration/vibration.dart';
 
 class DrawerSection extends StatelessWidget with PreferredSizeWidget {
-  //final Column things;
   DrawerSection();
+
+  bool _determineDeviceVibration() {
+    return (Vibration.hasVibrator() != null);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
         color: Colors.blueGrey[600],
-        /*child: things*/
         child: Column(
           children: <Widget>[
             Row(
@@ -17,7 +20,7 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
               children: <Widget>[
                 Text('Vibration (False Value)'),
                 Switch(
-                  value: false,
+                  value: (_determineDeviceVibration()),
                   onChanged: null,
                 ),
               ],
