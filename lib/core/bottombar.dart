@@ -59,7 +59,9 @@ class BottomNavBar extends StatelessWidget {
                     Icons.play_arrow,
                     color: Colors.grey,
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pushNamed(context, Ready);
+                  },
                 ),
                 Text('Begin'),
               ],

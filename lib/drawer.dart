@@ -1,3 +1,4 @@
+import 'package:crdi_mobile_app/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:vibration/vibration.dart';
 
@@ -37,12 +38,16 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
             ),
             FlatButton(
               child: Text('Legal'),
-              onPressed: null,
+              onPressed: () {
+                Navigator.pushNamed(context, Legal);
+              },
               textColor: Colors.white,
             ),
             FlatButton(
               child: Text('How-to'),
-              onPressed: null,
+              onPressed: () {
+                Navigator.pushNamed(context, HowTo);
+              },
               textColor: Colors.white,
             )
           ],
