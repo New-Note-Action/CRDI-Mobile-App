@@ -1,13 +1,14 @@
 import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/vibrate.dart';
 import 'package:flutter/material.dart';
-import 'package:vibration/vibration.dart';
 
+/*class DrawerState extends StatefulWidget{
+  createState() => DrawerSection();
+}*/
+
+//class DrawerSection extends State<DrawerState> with PreferredSizeWidget
 class DrawerSection extends StatelessWidget with PreferredSizeWidget {
   DrawerSection();
-
-  bool _determineDeviceVibration() {
-    return (Vibration.hasVibrator() != null);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +22,8 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
               children: <Widget>[
                 Text('Vibration (False Value)'),
                 Switch(
-                  value: (_determineDeviceVibration()),
-                  onChanged: null,
+                  value: (false), //_determineDeviceVibration()),
+                  onChanged: null, //_deviceVibrate(),
                 ),
               ],
             ),
@@ -39,6 +40,9 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
             FlatButton(
               child: Text('Legal'),
               onPressed: () {
+                if (vibrateEnabled) {
+                  VibrateDevice();
+                }
                 Navigator.pushNamed(context, Legal);
               },
               textColor: Colors.white,
@@ -46,6 +50,9 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
             FlatButton(
               child: Text('How-to'),
               onPressed: () {
+                if (vibrateEnabled) {
+                  VibrateDevice();
+                }
                 Navigator.pushNamed(context, HowTo);
               },
               textColor: Colors.white,

@@ -14,7 +14,7 @@ class SelectProfile extends StatelessWidget {
         appBar: TopAppBar('Profile Select', true),
         drawer: DrawerSection(),
         body: ProfileDropDown(),
-        bottomNavigationBar: BottomNavBar(false),
+        bottomNavigationBar: BottomNavBar(true),
       ),
     );
   }
