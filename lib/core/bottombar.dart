@@ -1,3 +1,4 @@
+import 'package:crdi_mobile_app/core/config.dart';
 import 'package:crdi_mobile_app/route_names.dart';
 import 'package:flutter/material.dart';
 //import 'package:crdi_mobile_app/test.dart';
@@ -52,6 +53,7 @@ class BottomNavBar extends StatelessWidget {
                     }
                     Navigator.pushNamedAndRemoveUntil(
                         context, MainMenu, (_) => false);
+                    portraitMode();
                   },
                 ),
                 Text('Home'),
