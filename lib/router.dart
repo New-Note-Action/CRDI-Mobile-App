@@ -16,29 +16,29 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   //TODO Add paths to actual Features
   switch (settings.name) {
     case MainMenu:
-      portraitMode();
+      enableRotation();
       return MaterialPageRoute(
         builder: (context) => MainMenuClass(),
       );
     case Export:
-      portraitMode();
+      enableRotation();
       return MaterialPageRoute(
         builder: (context) => UndefinedView(
           featureName: settings.name,
         ),
       );
     case HowTo:
-      portraitMode();
+      enableRotation();
       return MaterialPageRoute(
         builder: (context) => HowToClass(),
       );
     case Legal:
-      portraitMode();
+      enableRotation();
       return MaterialPageRoute(
         builder: (context) => AboutClass(),
       );
     case ProfileSelect:
-      portraitMode();
+      enableRotation();
       return MaterialPageRoute(
         builder: (context) => SelectProfile(),
       );
@@ -53,7 +53,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (context) => TestingPage(),
       );
     default:
-      portraitMode();
+      enableRotation();
       return MaterialPageRoute(
         builder: (context) => UndefinedView(
           featureName: settings.name,
