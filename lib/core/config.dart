@@ -24,6 +24,14 @@ void enableRotation() {
   ]);
 }
 
+void enterFullscreen() {
+  SystemChrome.setEnabledSystemUIOverlays([]);
+}
+
+void exitFullscreen() {
+  SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+}
+
 // TODO Complete Theme
 ThemeData mainTheme() {
   return ThemeData(
