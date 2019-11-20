@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:control_pad/control_pad.dart';
 import 'package:crdi_mobile_app/route_names.dart';
-//import 'package:crdi_mobile_app/core/config.dart';
+import 'package:crdi_mobile_app/core/config.dart';
 
 class SliderExample extends StatefulWidget {
   @override
@@ -17,10 +17,7 @@ class TestingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
+    landscapeMode();
 
     return SafeArea(
       child: Scaffold(
