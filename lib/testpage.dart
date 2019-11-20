@@ -16,7 +16,7 @@ class TestingPage extends StatelessWidget {
   int _value = 1;
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    enterFullscreen();
     landscapeMode();
 
     return SafeArea(
