@@ -7,9 +7,17 @@ import 'package:flutter/material.dart';
 }*/
 
 //class DrawerSection extends State<DrawerState> with PreferredSizeWidget
-class DrawerSection extends StatelessWidget with PreferredSizeWidget {
+class DrawerSection extends StatefulWidget with PreferredSizeWidget {
   DrawerSection();
 
+  @override
+  _DrawerSectionState createState() => _DrawerSectionState();
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+}
+
+class _DrawerSectionState extends State<DrawerSection> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -59,7 +67,4 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
       ),
     );
   }
-
-  @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
