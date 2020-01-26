@@ -14,7 +14,6 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.blueGrey[600],
         child: Column(
           children: <Widget>[
             Row(
@@ -45,7 +44,6 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
                 }
                 Navigator.pushNamed(context, Legal);
               },
-              textColor: Colors.white,
             ),
             FlatButton(
               child: Text('How-to'),
@@ -55,7 +53,6 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
                 }
                 Navigator.pushNamed(context, HowTo);
               },
-              textColor: Colors.white,
             )
           ],
         ),
