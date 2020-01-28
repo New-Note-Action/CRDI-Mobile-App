@@ -20,10 +20,10 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('Vibration (False Value)'),
+                Text('Vibration'),
                 Switch(
-                  value: (false), //_determineDeviceVibration()),
-                  onChanged: null, //_deviceVibrate(),
+                  value: (false),
+                  onChanged: null,
                 ),
               ],
             ),
@@ -40,9 +40,7 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
             FlatButton(
               child: Text('Legal'),
               onPressed: () {
-                if (vibrateEnabled) {
-                  VibrateDevice();
-                }
+                VibrateDevice();
                 Navigator.pushNamed(context, Legal);
               },
               textColor: Colors.white,
@@ -50,9 +48,7 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
             FlatButton(
               child: Text('How-to'),
               onPressed: () {
-                if (vibrateEnabled) {
-                  VibrateDevice();
-                }
+                VibrateDevice();
                 Navigator.pushNamed(context, HowTo);
               },
               textColor: Colors.white,
