@@ -2,19 +2,21 @@ import 'package:crdi_mobile_app/route_names.dart';
 import 'package:crdi_mobile_app/vibrate.dart';
 import 'package:flutter/material.dart';
 
-/*class DrawerState extends StatefulWidget{
-  createState() => DrawerSection();
-}*/
-
-//class DrawerSection extends State<DrawerState> with PreferredSizeWidget
-class DrawerSection extends StatelessWidget with PreferredSizeWidget {
+class DrawerSection extends StatefulWidget with PreferredSizeWidget {
   DrawerSection();
 
+  @override
+  _DrawerSectionState createState() => _DrawerSectionState();
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+}
+
+class _DrawerSectionState extends State<DrawerSection> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.blueGrey[600],
         child: Column(
           children: <Widget>[
             Row(
@@ -22,8 +24,14 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
               children: <Widget>[
                 Text('Vibration'),
                 Switch(
-                  value: (false),
-                  onChanged: null,
+                  value: (vibrateEnabled),
+                  onChanged: (bool newValue) {
+                    setState(
+                      () {
+                        vibrateEnabled = newValue;
+                      },
+                    ); //setState
+                  }, //onChanged
                 ),
               ],
             ),
@@ -43,7 +51,6 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
                 VibrateDevice();
                 Navigator.pushNamed(context, Legal);
               },
-              textColor: Colors.white,
             ),
             FlatButton(
               child: Text('How-to'),
@@ -51,14 +58,10 @@ class DrawerSection extends StatelessWidget with PreferredSizeWidget {
                 VibrateDevice();
                 Navigator.pushNamed(context, HowTo);
               },
-              textColor: Colors.white,
-            )
+            ),
           ],
         ),
       ),
     );
   }
-
-  @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }

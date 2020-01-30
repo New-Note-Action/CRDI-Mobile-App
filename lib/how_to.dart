@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/core/config.dart';
 import 'package:crdi_mobile_app/core/bottombar.dart';
+import 'package:crdi_mobile_app/drawer.dart';
 
 class HowToClass extends StatelessWidget {
   Future<String> _getStringOfHowToFile(BuildContext context) async {
@@ -20,7 +21,7 @@ class HowToClass extends StatelessWidget {
           return SafeArea(
             child: Scaffold(
               appBar: TopAppBar("How To", true),
-              drawer: Drawer(),
+              drawer: DrawerSection(),
               bottomNavigationBar: BottomNavBar(false),
               body: Markdown(data: text.data),
             ),
