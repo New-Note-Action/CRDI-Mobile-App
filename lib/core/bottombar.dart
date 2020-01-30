@@ -93,7 +93,7 @@ class BottomNavBar extends StatelessWidget {
                   iconSize: iconSizeOnScreen,
                   icon: Icon(
                     Icons.arrow_back,
-                    color: Colors.blue,
+                    //color: Colors.blue,
                   ),
                   onPressed: () {
                     if (vibrateEnabled) {
