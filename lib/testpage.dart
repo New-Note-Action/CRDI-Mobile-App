@@ -2,22 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:control_pad/control_pad.dart';
 import 'package:crdi_mobile_app/route_names.dart';
-import 'package:crdi_mobile_app/core/config.dart';
+import 'package:crdi_mobile_app/inputs/button.dart';
+
+import 'package:crdi_mobile_app/inputs/slider.dart';
+
+//import 'package:crdi_mobile_app/core/config.dart';
 
 class SliderExample extends StatefulWidget {
   @override
-  _SliderExampleState createState() {
-    return _SliderExampleState();
+  SliderExampleState createState() {
+    return SliderExampleState();
   }
 }
 
 
 class TestingPage extends StatelessWidget {
   int _value = 1;
+
+
+  int joystickX = 0;
+  int joystickY = 0;
+
+  int sliderValue = 0;
+
   @override
+
+
   Widget build(BuildContext context) {
-    enterFullscreen();
-    landscapeMode();
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+    ]);
 
     return SafeArea(
       child: Scaffold(
@@ -41,10 +57,10 @@ class TestingPage extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.4,
                     child: Container(
                       margin: const EdgeInsets.all(10.0),
-                    child: Text('Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.', style: TextStyle(color: Colors.white), textAlign: TextAlign.center),
-                    alignment: Alignment(0.0, 0.0),
+                      child: Text('Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.', style: TextStyle(color: Colors.white), textAlign: TextAlign.center),
+                      alignment: Alignment(0.0, 0.0),
 
-                  ),
+                    ),
                   ),
 
                   Container(
@@ -83,25 +99,8 @@ class TestingPage extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width * 0.333,
                     height: MediaQuery.of(context).size.height * 0.6,
-                    child:
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Spacer(),
-                          IconButton(
-                            alignment: Alignment(0.0, 0.0),
-                            icon: Icon(Icons.fingerprint),
-                            iconSize: MediaQuery.of(context).size.width * 0.2,
-                            //color: Colors.white,
-                            onPressed: () {
-                              print("I was Pressed");
-                            },
-                          ),
-                          Spacer(),
-                          Text('Excited\n', style: TextStyle(color: Colors.white)),
-                        ]),
 
+                    child: addButton(),
 
                     decoration: const BoxDecoration(
                       color: Colors.grey,
@@ -135,18 +134,17 @@ class TestingPage extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
                       child:
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Spacer(),
-                          Container(
-
-                          child: JoystickView(iconsColor: Colors.white30, backgroundColor: Colors.black54, innerCircleColor: Colors.black26, size: MediaQuery.of(context).size.width * 0.26,),
-                          ),
-                          Spacer(),
-                          Text('Happiness\n', style: TextStyle(color: Colors.white)),
-                        ]),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Spacer(),
+                            Container(
+                              child: JoystickView(iconsColor: Colors.white30, backgroundColor: Colors.black54, innerCircleColor: Colors.black26, size: MediaQuery.of(context).size.width * 0.26,),
+                            ),
+                            Spacer(),
+                            Text('Happiness\n', style: TextStyle(color: Colors.white)),
+                          ]),
 
                     ),
                   ),
@@ -161,7 +159,7 @@ class TestingPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Spacer(),
-                         //slider goes here
+                          //slider goes here
                           SliderExample(),
                           Spacer(),
                           Text('Tension\n', style: TextStyle(color: Colors.white)),
@@ -191,32 +189,7 @@ class TestingPage extends StatelessWidget {
   }
 }
 
-class _SliderExampleState extends State {
-  int _value = 6;
-  @override
-  Widget build(BuildContext context) {
-              return
-                      new Expanded(
-                          child: Slider(
-                              value: _value.toDouble(),
-                              min: 1.0,
-                              max: 10.0,
-                              divisions: 10,
-                              activeColor: Colors.red,
-                              inactiveColor: Colors.black,
-                              label: _value.toString(),
-                              onChanged: (double newValue) {
-                                setState(() {
-                                  _value = newValue.round();
-                                });
-                              },
-                              semanticFormatterCallback: (double newValue) {
-                                return '${newValue.round()} dollars';
-                              }
-                          )
-    );
-  }
-}
+
 
 void _showDialog(context) {
   // flutter defined function
