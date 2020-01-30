@@ -23,7 +23,7 @@ class BottomNavBar extends StatelessWidget {
                   iconSize: iconSizeOnScreen,
                   icon: Icon(
                     Icons.arrow_back,
-                    color: Colors.blue,
+                    //color: Colors.blue,
                   ),
                   onPressed: () {
                     if (vibrateEnabled) {
@@ -45,7 +45,7 @@ class BottomNavBar extends StatelessWidget {
                   iconSize: iconSizeOnScreen,
                   icon: Icon(
                     Icons.home,
-                    color: Colors.red,
+                    //color: Colors.red,
                   ),
                   onPressed: () {
                     if (vibrateEnabled) {
@@ -67,7 +67,7 @@ class BottomNavBar extends StatelessWidget {
                   iconSize: iconSizeOnScreen,
                   icon: Icon(
                     Icons.play_arrow,
-                    color: Colors.green,
+                    //color: Colors.green,
                   ),
                   onPressed: () {
                     if (vibrateEnabled) {
@@ -113,7 +113,7 @@ class BottomNavBar extends StatelessWidget {
                   iconSize: iconSizeOnScreen,
                   icon: Icon(
                     Icons.home,
-                    color: Colors.red,
+                    //color: Colors.red,
                   ),
                   onPressed: () {
                     if (vibrateEnabled) {
@@ -126,6 +126,7 @@ class BottomNavBar extends StatelessWidget {
                 Text('Home'),
               ],
             ),
+            Spacer(),
             Spacer(),
           ],
         ),
