@@ -1,9 +1,11 @@
 import 'package:vibration/vibration.dart';
 
-bool vibrateEnabled = false;
+bool vibrateEnabled = true;
 
 class VibrateDevice {
   VibrateDevice() {
-    Vibration.vibrate(duration: 50);
+    if (vibrateEnabled) {
+      Vibration.vibrate(duration: 50);
+    }
   }
 }

@@ -26,9 +26,7 @@ class BottomNavBar extends StatelessWidget {
                     //color: Colors.blue,
                   ),
                   onPressed: () {
-                    if (vibrateEnabled) {
-                      VibrateDevice();
-                    }
+                    VibrateDevice();
                     if (Navigator.canPop(context)) {
                       Navigator.pop(context);
                     }
@@ -48,9 +46,7 @@ class BottomNavBar extends StatelessWidget {
                     //color: Colors.red,
                   ),
                   onPressed: () {
-                    if (vibrateEnabled) {
-                      VibrateDevice();
-                    }
+                    VibrateDevice();
                     Navigator.pushNamedAndRemoveUntil(
                         context, MainMenu, (_) => false);
                     portraitMode();
@@ -70,9 +66,7 @@ class BottomNavBar extends StatelessWidget {
                     //color: Colors.green,
                   ),
                   onPressed: () {
-                    if (vibrateEnabled) {
-                      VibrateDevice();
-                    }
+                    VibrateDevice();
                     Navigator.pushNamed(context, Ready);
                   },
                 ),
@@ -96,9 +90,7 @@ class BottomNavBar extends StatelessWidget {
                     //color: Colors.blue,
                   ),
                   onPressed: () {
-                    if (vibrateEnabled) {
-                      VibrateDevice();
-                    }
+                    VibrateDevice();
                     if (Navigator.canPop(context)) Navigator.pop(context);
                   },
                 ),
@@ -116,9 +108,7 @@ class BottomNavBar extends StatelessWidget {
                     //color: Colors.red,
                   ),
                   onPressed: () {
-                    if (vibrateEnabled) {
-                      VibrateDevice();
-                    }
+                    VibrateDevice();
                     Navigator.pushNamedAndRemoveUntil(
                         context, MainMenu, (_) => false);
                   },
