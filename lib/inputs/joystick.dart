@@ -1,4 +1,4 @@
-/* joystick.dart - Joystick control for the testing screen */
+/* inputs/joystick.dart - Joystick control for the testing screen */
 
 /*
     Copyright (C) 2019-2020 "New Note Action" (John Elik, Cole Howard,
