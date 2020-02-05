@@ -19,7 +19,15 @@ class _DrawerSectionState extends State<DrawerSection> {
       child: ListView(
         children: <Widget>[
           DrawerHeader(
-            child: Text("Settings & Help"),
+            child: Text(
+              "Settings & Help",
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSecondary,
+              ),
+            ),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.secondary,
+            ),
           ),
           SwitchListTile(
             title: Text('Vibration'),
