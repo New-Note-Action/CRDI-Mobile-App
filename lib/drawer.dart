@@ -16,51 +16,39 @@ class _DrawerSectionState extends State<DrawerSection> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Container(
-        child: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Vibration'),
-                Switch(
-                  value: (vibrateEnabled),
-                  onChanged: (bool newValue) {
-                    setState(
-                      () {
-                        vibrateEnabled = newValue;
-                      },
-                    ); //setState
-                  }, //onChanged
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Theme (True Value)'),
-                Switch(
-                  value: true,
-                  onChanged: null,
-                )
-              ],
-            ),
-            FlatButton(
-              child: Text('Legal'),
-              onPressed: () {
-                VibrateDevice();
-                Navigator.pushNamed(context, Legal);
-              },
-            ),
-            FlatButton(
-              child: Text('How-to'),
-              onPressed: () {
-                VibrateDevice();
-                Navigator.pushNamed(context, HowTo);
-              },
-            ),
-          ],
-        ),
+      child: ListView(
+        children: <Widget>[
+          SwitchListTile(
+            title: Text('Vibration'),
+            value: (vibrateEnabled),
+            onChanged: (bool newValue) {
+              setState(
+                () {
+                  vibrateEnabled = newValue;
+                },
+              ); //setState
+            }, //onChanged
+          ),
+          SwitchListTile(
+            title: Text('Theme (True Value)'),
+            value: true,
+            onChanged: null,
+          ),
+          ListTile(
+            title: Text('Legal'),
+            onTap: () {
+              VibrateDevice();
+              Navigator.pushNamed(context, Legal);
+            },
+          ),
+          ListTile(
+            title: Text('How-to'),
+            onTap: () {
+              VibrateDevice();
+              Navigator.pushNamed(context, HowTo);
+            },
+          ),
+        ],
       ),
     );
   }
