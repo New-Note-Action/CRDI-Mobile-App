@@ -18,6 +18,9 @@ class _DrawerSectionState extends State<DrawerSection> {
     return Drawer(
       child: ListView(
         children: <Widget>[
+          DrawerHeader(
+            child: Text("Settings & Help"),
+          ),
           SwitchListTile(
             title: Text('Vibration'),
             value: (vibrateEnabled),
