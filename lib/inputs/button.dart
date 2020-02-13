@@ -14,7 +14,7 @@ class addButton extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Spacer(),
+
             Listener(
               onPointerDown: (details) async {
                 VibrateDevice();
@@ -38,7 +38,7 @@ class addButton extends StatelessWidget{
 
               child:
               IconButton(
-
+                onPressed: (){print(".");},
                 alignment: Alignment(0.0, 0.0),
                 icon: Icon(Icons.fingerprint),
                 iconSize: MediaQuery
@@ -53,8 +53,7 @@ class addButton extends StatelessWidget{
             ),
 
 
-            Spacer(),
-            Text('Excited\n', style: TextStyle(color: Colors.white)),
+
           ]),
     );
   }
