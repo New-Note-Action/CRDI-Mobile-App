@@ -26,6 +26,7 @@ class VibrateDevice {
   VibrateDevice() {
     if (vibrateEnabled) {
       Vibration.vibrate(duration: 50);
+      print('vibrated');
     }
   }
 }
