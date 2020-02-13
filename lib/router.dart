@@ -43,9 +43,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case Export:
       enableRotation();
       return MaterialPageRoute(
-        builder: (context) => UndefinedView(
-          featureName: settings.name,
-        ),
+        builder: (context) => SubmitResults(),
       );
     case HowTo:
       enableRotation();
