@@ -60,9 +60,7 @@ class TestingPage extends StatelessWidget {
     }
 
     if (profile == 3) {
-      return SafeArea(
-        child: profile3(),
-      );
+      return profile3();
     }
 
     if (profile == 4) {
