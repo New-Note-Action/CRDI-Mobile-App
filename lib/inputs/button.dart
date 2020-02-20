@@ -1,20 +1,60 @@
-/* inputs/button.dart - Button control for the testing screen */
+import 'package:flutter/material.dart';
+import 'package:crdi_mobile_app/vibrate.dart';
 
-/*
-    Copyright (C) 2019-2020 "New Note Action" (John Elik, Cole Howard,
-    Sean Pohl, Tyler Tichler)
+class addButton extends StatelessWidget{
+  int buttonPressed = 0;
+  int numPressed = 0; //Every Clock Cycle, this variable will reset to 0.
+  @override
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+  Widget build(BuildContext context) {
+    return
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+    Container(
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
+            Listener(
+              onPointerDown: (details) async {
+                VibrateDevice();
+                buttonPressed = 1;
+                numPressed = numPressed +
+                    1; //Every Clock Cycle, this variable will reset to 0.
+                print("Button Pressed. " + buttonPressed.toString());
+                print("Button Pressed: " + numPressed.toString() + " Times.");
+//await Future.delayed(Duration(milliseconds: 500)); // <--- Clock
 
+//A function to either write this data to the file OR write it to a data structure would go here
+//Have the inputs be called in from their modular files, but each input will then call out to an outside function for its triggered interactions.
+//This main file will handle the file IO by writing the returned values from these functions to the output CSV.  This way one clock can rule the output writing, and only one function is accessing the file ever.
+              },
+              onPointerUp: (details) async {
+                buttonPressed = 0;
+                print("Button Unpressed. " + buttonPressed.toString());
+//A function to either write this data to the file OR write it to a data structure would go here
+              },
+
+
+              child:
+              IconButton(
+                onPressed: (){print(".");},
+                alignment: Alignment(0.0, 0.0),
+                icon: Icon(Icons.fingerprint),
+                iconSize: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.2,
+//color: Colors.white,
+
+
+              ),
+
+            ),
+
+
+
+          ]),
+    );
+  }
+}
