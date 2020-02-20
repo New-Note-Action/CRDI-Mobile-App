@@ -29,6 +29,7 @@ void portraitMode() {
 }
 
 void landscapeMode() {
+  enterFullscreen();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
@@ -36,6 +37,7 @@ void landscapeMode() {
 }
 
 void enableRotation() {
+  exitFullscreen();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

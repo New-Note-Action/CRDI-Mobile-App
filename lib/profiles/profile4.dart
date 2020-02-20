@@ -148,10 +148,11 @@ class profile4 extends StatelessWidget {
                             child: JoystickView(iconsColor: Colors.white30,
                               backgroundColor: Colors.black54,
                               innerCircleColor: Colors.black26,
-                              size: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width * 0.26,),
+                              size: (MediaQuery.of(context).size.width * 0.26 <
+                                  MediaQuery.of(context).size.height * 0.5) //Check if quarter width is less than half height
+                                  ? MediaQuery.of(context).size.width * 0.26    //If it is, set the size to quarter width
+                                  : MediaQuery.of(context).size.height * 0.5,
+                            ),
                           ),
                           Spacer(),
                           Text('Happiness\n', style: TextStyle(color: Colors
