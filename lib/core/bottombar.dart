@@ -137,7 +137,16 @@ class BottomNavBar extends StatelessWidget {
               ],
             ),
             Spacer(),
-            Spacer(),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(Icons.pregnant_woman),
+                  onPressed: () {},
+                ),
+              ],
+            ),
           ],
         ),
       );

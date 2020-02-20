@@ -26,17 +26,12 @@ import 'package:crdi_mobile_app/profiles/profile3.dart';
 import 'package:crdi_mobile_app/profiles/profile4.dart';
 import 'package:crdi_mobile_app/profiles/profile5.dart';
 
-
 //import 'package:crdi_mobile_app/core/config.dart';
-
-
-
 
 class TestingPage extends StatelessWidget {
   //int _value = 1;
 
   int profile = 2;
-
 
   int joystickX = 0;
   int joystickY = 0;
@@ -49,34 +44,32 @@ class TestingPage extends StatelessWidget {
 
     if (profile == 1) {
       return SafeArea(
-        child: profile1(),
+        child: Profile1(),
       );
     }
 
     if (profile == 2) {
       return SafeArea(
-        child: profile2(),
+        child: Profile2(),
       );
     }
 
     if (profile == 3) {
       return SafeArea(
-        child: profile3(),
+        child: Profile3(),
       );
     }
 
     if (profile == 4) {
       return SafeArea(
-        child: profile4(),
+        child: Profile4(),
       );
     }
 
     if (profile == 5) {
       return SafeArea(
-        child: profile5(),
+        child: Profile5(),
       );
     }
   }
-
-
 }

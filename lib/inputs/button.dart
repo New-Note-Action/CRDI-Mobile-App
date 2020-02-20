@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/vibrate.dart';
 
-class addButton extends StatelessWidget{
+// ignore: must_be_immutable
+class AddButton extends StatelessWidget {
   int buttonPressed = 0;
   int numPressed = 0; //Every Clock Cycle, this variable will reset to 0.
   @override
-
   Widget build(BuildContext context) {
-    return
-
-    Container(
+    return Container(
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-
             Listener(
               onPointerDown: (details) async {
                 VibrateDevice();
@@ -34,26 +31,16 @@ class addButton extends StatelessWidget{
                 print("Button Unpressed. " + buttonPressed.toString());
 //A function to either write this data to the file OR write it to a data structure would go here
               },
-
-
-              child:
-              IconButton(
-                onPressed: (){print(".");},
+              child: IconButton(
+                onPressed: () {
+                  print(".");
+                },
                 alignment: Alignment(0.0, 0.0),
                 icon: Icon(Icons.fingerprint),
-                iconSize: MediaQuery
-                    .of(context)
-                    .size
-                    .width * 0.2,
+                iconSize: MediaQuery.of(context).size.width * 0.2,
 //color: Colors.white,
-
-
               ),
-
             ),
-
-
-
           ]),
     );
   }

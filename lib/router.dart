@@ -27,7 +27,7 @@ import 'package:crdi_mobile_app/profile_select.dart';
 import 'package:crdi_mobile_app/ready.dart';
 import 'package:crdi_mobile_app/export.dart';
 import 'package:crdi_mobile_app/how_to.dart';
-import 'package:crdi_mobile_app/legal_info.dart';
+//import 'package:crdi_mobile_app/legal_info.dart';
 import 'package:crdi_mobile_app/about.dart';
 import 'package:crdi_mobile_app/main_menu.dart';
 import 'package:crdi_mobile_app/testpage.dart';
@@ -63,7 +63,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case Ready:
       landscapeMode();
       return MaterialPageRoute(
-        builder: (context) => readyPage(),
+        builder: (context) => ReadyPage(),
       );
     case Testing:
       landscapeMode();
