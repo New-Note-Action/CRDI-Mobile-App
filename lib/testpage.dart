@@ -28,10 +28,11 @@ import 'package:crdi_mobile_app/profiles/profile5.dart';
 
 //import 'package:crdi_mobile_app/core/config.dart';
 
+// ignore: must_be_immutable
 class TestingPage extends StatelessWidget {
   //int _value = 1;
 
-  int profile = 2;
+  int profile = 1;
 
   int joystickX = 0;
   int joystickY = 0;
@@ -39,19 +40,22 @@ class TestingPage extends StatelessWidget {
   int sliderValue = 0;
 
   @override
+  // ignore: missing_return
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
     if (profile == 1) {
-      return SafeArea(
-        child: Profile1(),
-      );
+//      return SafeArea(
+//        child: Profile1(),
+//      );
+      return Profile1();
     }
 
     if (profile == 2) {
-      return SafeArea(
-        child: Profile2(),
-      );
+//      return SafeArea(
+//        child: Profile2()
+//      );
+      return Profile2();
     }
 
     if (profile == 3) {
