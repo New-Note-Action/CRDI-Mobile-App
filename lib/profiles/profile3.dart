@@ -1,6 +1,9 @@
+import 'package:control_pad/control_pad.dart';
 import 'package:flutter/material.dart';
 
 import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/inputs/button.dart';
+import 'package:crdi_mobile_app/inputs/joystick.dart';
 
 import 'package:crdi_mobile_app/inputs/slider.dart';
 
@@ -17,16 +20,48 @@ class profile3 extends StatelessWidget {
               Expanded(
                 flex: 7,
                 child: Container(
-                    child: Text("Hello"),
-                    color: Colors.red,
-                    height: double.infinity),
+                  decoration: const BoxDecoration(
+                    color: Colors.black87,
+                    border: Border(
+                      top: BorderSide(width: 1.0, color: Colors.white30),
+                      left: BorderSide(width: 1.0, color: Colors.white30),
+//right: BorderSide(width: 1.0, color: Colors.white30),
+                      bottom: BorderSide(width: 1.0, color: Colors.white30),
+                    ),
+                  ),
+                  child: Container(
+                    margin: const EdgeInsets.all(10.0),
+                    child: Text(
+                        'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.center),
+                    alignment: Alignment(0.0, 0.0),
+                  ),
+                ),
               ),
               Expanded(
                 flex: 3,
                 child: Container(
-                    child: Text("There"),
-                    color: Colors.yellow,
-                    height: double.infinity),
+                    height: double.infinity,
+                    decoration: const BoxDecoration(
+                      color: Colors.black87,
+                      border: Border(
+                        top: BorderSide(width: 1.0, color: Colors.white30),
+                        left: BorderSide(width: 1.0, color: Colors.white30),
+                        right: BorderSide(width: 1.0, color: Colors.white30),
+                        bottom: BorderSide(width: 1.0, color: Colors.white30),
+                      ),
+                    ),
+                    child: IconButton(
+                      alignment: Alignment(0.0, 0.0),
+                      icon: Icon(Icons.pause_circle_outline),
+                      color: Colors.white,
+                      iconSize: MediaQuery.of(context).size.width * 0.1,
+                      onPressed: () {
+                        _showDialog(context);
+                        print("Pause Button Hit");
+                      },
+                    )),
               )
             ]),
           ),
@@ -36,21 +71,87 @@ class profile3 extends StatelessWidget {
             child: Row(children: [
               Expanded(
                 child: Container(
-                    child: Text("There"),
-                    color: Colors.blue,
-                    height: double.infinity),
+                  child: Column(
+                    children: [
+                      Spacer(),
+                      addButton(),
+                      Spacer(),
+                      Text('Excited\n', style: TextStyle(color: Colors.white)),
+                      Spacer(),
+                    ],
+                  ),
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: Border(
+//top: BorderSide(width: 1.0, color: Colors.black),
+                      left: BorderSide(width: 1.0, color: Colors.white30),
+                      right: BorderSide(width: 1.0, color: Colors.black),
+                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                    ),
+                  ),
+                ),
               ),
               Expanded(
                 child: Container(
-                    child: Text("Are"),
-                    color: Colors.green,
-                    height: double.infinity),
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: Border(
+//top: BorderSide(width: 1.0, color: Colors.black),
+                      left: BorderSide(width: 1.0, color: Colors.black),
+                      right: BorderSide(width: 1.0, color: Colors.black),
+                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                    ),
+                  ),
+                  child: Container(
+                    margin:
+                    const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Spacer(),
+                          Container(
+                            child: JoystickView(
+                              iconsColor: Colors.white30,
+                              backgroundColor: Colors.black54,
+                              innerCircleColor: Colors.black26,
+                              size: MediaQuery.of(context).size.width * 0.26,
+                            ),
+                          ),
+                          Spacer(),
+                          Text('Happiness\n',
+                              style: TextStyle(color: Colors.white)),
+                        ]),
+                  ),
+                ),
               ),
               Expanded(
                 child: Container(
-                    child: Text("Controls"),
-                    color: Colors.purple,
-                    height: double.infinity),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Spacer(),
+//slider goes here
+                        SliderExample(),
+                        Spacer(),
+                        Text('Tension\n',
+                            style: TextStyle(color: Colors.white)),
+                      ]),
+
+
+                  alignment: Alignment(0.0, 0.0),
+
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: Border(
+//top: BorderSide(width: 1.0, color: Colors.black),
+                      left: BorderSide(width: 1.0, color: Colors.black),
+                      right: BorderSide(width: 1.0, color: Colors.white30),
+                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                    ),
+                  ),
+                ),
               )
             ]),
           ),
