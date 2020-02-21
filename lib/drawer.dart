@@ -46,7 +46,7 @@ class _DrawerSectionState extends State<DrawerSection> {
               ),
             ),
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
+              color: Theme.of(context).colorScheme.secondaryVariant,
             ),
           ),
           SwitchListTile(
