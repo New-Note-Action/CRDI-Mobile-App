@@ -18,7 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/vibrate.dart';
 import 'package:flutter/material.dart';
 

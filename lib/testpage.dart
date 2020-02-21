@@ -38,6 +38,7 @@ class TestingPage extends StatelessWidget {
   int profile = 1;
 
 
+
   int joystickX = 0;
   int joystickY = 0;
 
@@ -45,7 +46,8 @@ class TestingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    print(MediaQuery.of(context).size.width);
+    print(MediaQuery.of(context).size.height);
 
     if (profile == 1) {
       return profile1();

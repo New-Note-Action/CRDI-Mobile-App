@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:control_pad/control_pad.dart';
-import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:crdi_mobile_app/inputs/button.dart';
 import 'package:crdi_mobile_app/inputs/slider.dart';
 
 class profile1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, allowFontScaling: false);
+    print(ScreenUtil.bottomBarHeight);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(children: <Widget>[
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,8 +26,8 @@ class profile1 extends StatelessWidget {
                   bottom: BorderSide(width: 1.0, color: Colors.white30),
                 ),
               ),
-              width: MediaQuery.of(context).size.width * 0.8,
-              height: MediaQuery.of(context).size.height * 0.4,
+              width: ScreenUtil.screenWidthDp * 0.8,
+              height: ScreenUtil.screenHeightDp * 0.4,
               child: Container(
                 margin: const EdgeInsets.all(10.0),
                 child: Text(
@@ -34,8 +38,8 @@ class profile1 extends StatelessWidget {
               ),
             ),
             Container(
-                width: MediaQuery.of(context).size.width * 0.2,
-                height: MediaQuery.of(context).size.height * 0.4,
+                width: ScreenUtil.screenWidthDp * 0.2,
+                height: ScreenUtil.screenHeightDp * 0.4,
                 decoration: const BoxDecoration(
                   color: Colors.black87,
                   border: Border(
@@ -49,7 +53,7 @@ class profile1 extends StatelessWidget {
                   alignment: Alignment(0.0, 0.0),
                   icon: Icon(Icons.pause_circle_outline),
                   color: Colors.white,
-                  iconSize: MediaQuery.of(context).size.width * 0.1,
+                  iconSize: ScreenUtil.screenWidthDp * 0.1,
                   onPressed: () {
                     _showDialog(context);
                     print("Pause Button Hit");
@@ -61,8 +65,8 @@ class profile1 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: MediaQuery.of(context).size.width * 0.333,
-              height: MediaQuery.of(context).size.height * 0.6,
+              width: ScreenUtil.screenWidthDp * 0.333,
+              height: ScreenUtil.screenHeightDp * 0.6,
               child: Column(
                 children: [
                   Spacer(),
@@ -83,8 +87,8 @@ class profile1 extends StatelessWidget {
               ),
             ),
             Container(
-              width: MediaQuery.of(context).size.width * 0.334,
-              height: MediaQuery.of(context).size.height * 0.6,
+              width: ScreenUtil.screenWidthDp * 0.334,
+              height: ScreenUtil.screenHeightDp * 0.6,
               decoration: const BoxDecoration(
                 color: Colors.grey,
                 border: Border(
@@ -107,10 +111,10 @@ class profile1 extends StatelessWidget {
                           iconsColor: Colors.white30,
                           backgroundColor: Colors.black54,
                           innerCircleColor: Colors.black26,
-                          size: (MediaQuery.of(context).size.width * 0.26 <
-                                  MediaQuery.of(context).size.height * 0.5) //Check if quarter width is less than half height
-                              ? MediaQuery.of(context).size.width * 0.26    //If it is, set the size to quarter width
-                              : MediaQuery.of(context).size.height * 0.5,   //Else, set the size to half height
+                          size: (ScreenUtil.screenWidthDp * 0.26 <
+                                  ScreenUtil.screenHeightDp * 0.5) //Check if quarter width is less than half height
+                              ? ScreenUtil.screenWidthDp * 0.26    //If it is, set the size to quarter width
+                              : ScreenUtil.screenHeightDp * 0.5,   //Else, set the size to half height
                         ),
                       ),
                       Spacer(),
@@ -120,8 +124,8 @@ class profile1 extends StatelessWidget {
               ),
             ),
             Container(
-              width: MediaQuery.of(context).size.width * 0.333,
-              height: MediaQuery.of(context).size.height * 0.6,
+              width: ScreenUtil.screenWidthDp * 0.333,
+              height: ScreenUtil.screenHeightDp * 0.6,
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
