@@ -34,7 +34,7 @@ class readyPage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
           body: Container(
-            color: Colors.black,
+            color: Color(0x00000000),
             child: Column(children: <Widget>[
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,33 +72,20 @@ class readyPage extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.blueGrey,
-                        border: Border(
-                          top: BorderSide(width: 3, color: Colors.white30),
-                          left: BorderSide(width: 3, color: Colors.white30),
-                          right: BorderSide(width: 3, color: Colors.white30),
-                          bottom: BorderSide(width: 3, color: Colors.white30),
-                        ),
-                      ),
-
-                      //width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.height * 0.1,
-                      child: FlatButton(
+              //Row(
+                //crossAxisAlignment: CrossAxisAlignment.center,
+                //mainAxisAlignment: MainAxisAlignment.center,
+                //children: [
+                      RaisedButton(
                         onPressed: () {
                           print("Start was Pressed");
                           Navigator.pushNamed(context, Testing);
                         },
                         child: Text('Start',
                             style: TextStyle(color: Colors.white)),
-                      )),
-                ],
-              ),
+                      ),
+                //],
+              //),
               Spacer(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -114,10 +101,8 @@ class readyPage extends StatelessWidget {
                           bottom: BorderSide(width: 3, color: Colors.white30),
                         ),
                       ),
-
-                      //width: MediaQuery.of(context).size.width * 0.8,
                       height: MediaQuery.of(context).size.height * 0.1,
-                      child: FlatButton(
+                      child: RaisedButton(
                         onPressed: () {
                           print("Back was Pressed");
                         },

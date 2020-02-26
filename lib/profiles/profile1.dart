@@ -18,7 +18,7 @@ class profile1 extends StatelessWidget {
           children: [
             Container(
               decoration: const BoxDecoration(
-                color: Colors.black87,
+                color: Color(0x00000000),
                 border: Border(
                   top: BorderSide(width: 1.0, color: Colors.white30),
                   left: BorderSide(width: 1.0, color: Colors.white30),
@@ -41,7 +41,7 @@ class profile1 extends StatelessWidget {
                 width: ScreenUtil.screenWidthDp * 0.2,
                 height: ScreenUtil.screenHeightDp * 0.4,
                 decoration: const BoxDecoration(
-                  color: Colors.black87,
+                  color: Color(0x00000000),
                   border: Border(
                     top: BorderSide(width: 1.0, color: Colors.white30),
                     left: BorderSide(width: 1.0, color: Colors.white30),
@@ -77,7 +77,7 @@ class profile1 extends StatelessWidget {
                 ],
               ),
               decoration: const BoxDecoration(
-                color: Colors.grey,
+                color: Color(0x00000000),
                 border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
                   left: BorderSide(width: 1.0, color: Colors.white30),
@@ -90,7 +90,7 @@ class profile1 extends StatelessWidget {
               width: ScreenUtil.screenWidthDp * 0.334,
               height: ScreenUtil.screenHeightDp * 0.6,
               decoration: const BoxDecoration(
-                color: Colors.grey,
+                color: Color(0x00000000),
                 border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
                   left: BorderSide(width: 1.0, color: Colors.black),
@@ -110,7 +110,7 @@ class profile1 extends StatelessWidget {
                         child: JoystickView(
                           iconsColor: Colors.white30,
                           backgroundColor: Colors.black54,
-                          innerCircleColor: Colors.black26,
+                          innerCircleColor: Color(0xFF222222),
                           size: (ScreenUtil.screenWidthDp * 0.26 <
                                   ScreenUtil.screenHeightDp * 0.5) //Check if quarter width is less than half height
                               ? ScreenUtil.screenWidthDp * 0.26    //If it is, set the size to quarter width
@@ -138,7 +138,7 @@ class profile1 extends StatelessWidget {
                   ]),
               alignment: Alignment(0.0, 0.0),
               decoration: const BoxDecoration(
-                color: Colors.grey,
+                color: Color(0x00000000),
                 border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
                   left: BorderSide(width: 1.0, color: Colors.black),

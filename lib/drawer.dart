@@ -20,6 +20,7 @@
 
 import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/vibrate.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class DrawerSection extends StatefulWidget with PreferredSizeWidget {
@@ -61,9 +62,19 @@ class _DrawerSectionState extends State<DrawerSection> {
             }, //onChanged
           ),
           SwitchListTile(
-            title: Text('Theme (True Value)'),
-            value: true,
-            onChanged: null,
+            title: Text('Theme'),
+            value: (DynamicTheme.of(context).brightness == Brightness.dark),
+            onChanged: (bool newValue) {
+              setState(
+                    () {
+                  if(DynamicTheme.of(context).brightness == Brightness.dark) {
+                    DynamicTheme.of(context).setBrightness(Brightness.light);
+                  } else {
+                    DynamicTheme.of(context).setBrightness(Brightness.dark);
+                  }
+                },
+              ); //setState
+            },
           ),
           ListTile(
             title: Text('Legal'),

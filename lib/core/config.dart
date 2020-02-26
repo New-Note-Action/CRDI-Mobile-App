@@ -53,10 +53,3 @@ void enterFullscreen() {
 void exitFullscreen() {
   SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
 }
-
-// TODO Complete Theme
-ThemeData mainTheme() {
-  return ThemeData(
-    brightness: Brightness.dark,
-  );
-}
