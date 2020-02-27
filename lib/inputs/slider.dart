@@ -26,3 +26,10 @@ class SliderExampleState extends State {
       );
   }
 }
+
+class SliderExample extends StatefulWidget {
+  @override
+  SliderExampleState createState() {
+    return SliderExampleState();
+  }
+}
