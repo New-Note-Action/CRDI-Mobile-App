@@ -107,7 +107,7 @@ class BottomNavBar extends StatelessWidget {
                   iconSize: iconSizeOnScreen,
                   icon: Icon(
                     Icons.arrow_back,
-                    color: Colors.blue,
+                    //color: Colors.blue,
                   ),
                   onPressed: () {
                     VibrateDevice();
@@ -137,6 +137,16 @@ class BottomNavBar extends StatelessWidget {
               ],
             ),
             Spacer(),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  iconSize: iconSizeOnScreen,
+                  icon: Icon(Icons.pregnant_woman),
+                  onPressed: () {},
+                ),
+              ],
+            ),
           ],
         ),
       );
