@@ -26,13 +26,18 @@ import 'package:crdi_mobile_app/profiles/profile3.dart';
 import 'package:crdi_mobile_app/profiles/profile4.dart';
 import 'package:crdi_mobile_app/profiles/profile5.dart';
 
+
 //import 'package:crdi_mobile_app/core/config.dart';
 
-// ignore: must_be_immutable
+
+
+
 class TestingPage extends StatelessWidget {
   //int _value = 1;
 
   int profile = 1;
+
+
 
   int joystickX = 0;
   int joystickY = 0;
@@ -40,40 +45,30 @@ class TestingPage extends StatelessWidget {
   int sliderValue = 0;
 
   @override
-  // ignore: missing_return
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    print(MediaQuery.of(context).size.width);
+    print(MediaQuery.of(context).size.height);
 
     if (profile == 1) {
-//      return SafeArea(
-//        child: Profile1(),
-//      );
-      return Profile1();
+      return profile1();
     }
 
     if (profile == 2) {
-//      return SafeArea(
-//        child: Profile2()
-//      );
-      return Profile2();
+      return profile2();
     }
 
     if (profile == 3) {
-      return SafeArea(
-        child: Profile3(),
-      );
+      return profile3();
     }
 
     if (profile == 4) {
-      return SafeArea(
-        child: Profile4(),
-      );
+      return profile4();
     }
 
     if (profile == 5) {
-      return SafeArea(
-        child: Profile5(),
-      );
+      return profile5();
     }
   }
+
+
 }

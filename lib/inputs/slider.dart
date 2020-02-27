@@ -8,15 +8,16 @@ class SliderExampleState extends State {
       new Expanded(
           child: Slider(
               value: _value.toDouble(),
-              min: 1.0,
-              max: 10.0,
-              divisions: 10,
+              min: 0.0,
+              max: 100.0,
+              divisions: 100,
               activeColor: Colors.red,
               inactiveColor: Colors.black,
-              label: _value.toString(),
+              //label: _value.toString(),
               onChanged: (double newValue) {
                 setState(() {
                   _value = newValue.round();
+                  print(_value);
                 });
               },
               semanticFormatterCallback: (double newValue) {

@@ -18,15 +18,19 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+//TODO Edit to be specific to this project
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-//import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/drawer.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:simple_share/simple_share.dart';
 import 'package:flutter/services.dart';
+import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/core/bottombar.dart';
+import 'package:crdi_mobile_app/drawer.dart';
 
 class SubmitResults extends StatelessWidget {
   @override
@@ -74,13 +78,12 @@ class _ShareMenuState extends State<ShareMenu> {
           RaisedButton(
             onPressed: () {
               SimpleShare.share(
-                title: "Share my message",
-                msg:
-                    "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod " +
-                        "tempor incidunt ut labore et dolore magna aliqua.",
+                title: "DR.C Test Results",
+                msg: "Attached are the results for test [ID]\n\nSent via DR.C app",
+                subject: "Test [ID] Results",
               );
             },
-            child: Text('Share text!'),
+            child: Text('Submit this test'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -89,14 +92,14 @@ class _ShareMenuState extends State<ShareMenu> {
                 final uri = Uri.file(path);
                 SimpleShare.share(
                   uri: uri.toString(),
-                  title: "DR. C Results",
-                  msg: "Sent via DR. C app",
-                  subject: 'Test Results',
+                  title: "DR.C Test Results",
+                  msg: "Attached are the results for test [ID]\n\nSent via DR.C app",
+                  subject: "Test [ID] Results",
                 );
               }
               print('file shared!!!');
             },
-            child: Text('Share file!'),
+            child: Text('Submit a Test'),
           ),
         ],
       ),

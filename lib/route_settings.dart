@@ -1,4 +1,4 @@
-/* route_names.dart - Global variables with identifiers for routes */
+/* route_settings.dart - Global variables with identifiers for routes */
 
 /*
     Copyright (C) 2019-2020 "New Note Action" (John Elik, Cole Howard,
@@ -26,3 +26,10 @@ const String HowTo = 'About the App';
 const String Legal = 'Legal Information';
 const String Ready = 'Ready to Begin';
 const String Testing = 'Take a Test';
+
+class TestArgs {
+  final String TestName;
+  final int TestNum;
+  TestArgs(this.TestName, this.TestNum);
+}
+//TODO Individual Routes for separate Profiles?
