@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:crdi_mobile_app/inputs/button.dart';
 import 'package:crdi_mobile_app/inputs/slider.dart';
 
-class profile1 extends StatelessWidget {
+class Profile1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, allowFontScaling: false);
@@ -22,7 +22,7 @@ class profile1 extends StatelessWidget {
                 border: Border(
                   top: BorderSide(width: 1.0, color: Colors.white30),
                   left: BorderSide(width: 1.0, color: Colors.white30),
-//right: BorderSide(width: 1.0, color: Colors.white30),
+                  //right: BorderSide(width: 1.0, color: Colors.white30),
                   bottom: BorderSide(width: 1.0, color: Colors.white30),
                 ),
               ),
@@ -70,7 +70,7 @@ class profile1 extends StatelessWidget {
               child: Column(
                 children: [
                   Spacer(),
-                  addButton(),
+                  AddButton(),
                   Spacer(),
                   Text('Excited\n', style: TextStyle(color: Colors.white)),
                   Spacer(),
@@ -79,7 +79,7 @@ class profile1 extends StatelessWidget {
               decoration: const BoxDecoration(
                 color: Color(0x00000000),
                 border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
+                  //top: BorderSide(width: 1.0, color: Colors.black),
                   left: BorderSide(width: 1.0, color: Colors.white30),
                   right: BorderSide(width: 1.0, color: Colors.black),
                   bottom: BorderSide(width: 1.0, color: Colors.black),
@@ -92,7 +92,7 @@ class profile1 extends StatelessWidget {
               decoration: const BoxDecoration(
                 color: Color(0x00000000),
                 border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
+                  //top: BorderSide(width: 1.0, color: Colors.black),
                   left: BorderSide(width: 1.0, color: Colors.black),
                   right: BorderSide(width: 1.0, color: Colors.black),
                   bottom: BorderSide(width: 1.0, color: Colors.black),
@@ -112,9 +112,12 @@ class profile1 extends StatelessWidget {
                           backgroundColor: Colors.black54,
                           innerCircleColor: Color(0xFF222222),
                           size: (ScreenUtil.screenWidthDp * 0.26 <
-                                  ScreenUtil.screenHeightDp * 0.5) //Check if quarter width is less than half height
-                              ? ScreenUtil.screenWidthDp * 0.26    //If it is, set the size to quarter width
-                              : ScreenUtil.screenHeightDp * 0.5,   //Else, set the size to half height
+                                  ScreenUtil.screenHeightDp *
+                                      0.5) //Check if quarter width is less than half height
+                              ? ScreenUtil.screenWidthDp *
+                                  0.26 //If it is, set the size to quarter width
+                              : ScreenUtil.screenHeightDp *
+                                  0.5, //Else, set the size to half height
                         ),
                       ),
                       Spacer(),
@@ -131,7 +134,7 @@ class profile1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Spacer(),
-//slider goes here
+                    //slider goes here
                     SliderExample(),
                     Spacer(),
                     Text('Tension\n', style: TextStyle(color: Colors.white)),
@@ -140,7 +143,7 @@ class profile1 extends StatelessWidget {
               decoration: const BoxDecoration(
                 color: Color(0x00000000),
                 border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
+                  //top: BorderSide(width: 1.0, color: Colors.black),
                   left: BorderSide(width: 1.0, color: Colors.black),
                   right: BorderSide(width: 1.0, color: Colors.white30),
                   bottom: BorderSide(width: 1.0, color: Colors.black),

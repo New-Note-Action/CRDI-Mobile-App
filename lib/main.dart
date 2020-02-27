@@ -20,7 +20,6 @@
 
 import 'package:crdi_mobile_app/router.dart' as router;
 import 'package:crdi_mobile_app/route_settings.dart';
-import 'package:crdi_mobile_app/core/config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
@@ -74,8 +73,8 @@ class CRDIApp extends StatelessWidget {
                 //hoverColor: Color(0xFF000000),
                 //highlightColor: Color(0xFF000000),
                 splashColor: (brightness == Brightness.dark)
-                  ? Color(0xFF322365)
-                  : Color(0xFFE9D69C),
+                    ? Color(0xFF322365)
+                    : Color(0xFFE9D69C),
                 padding: EdgeInsets.all(8.0),
                 materialTapTargetSize: MaterialTapTargetSize.padded,
               ),

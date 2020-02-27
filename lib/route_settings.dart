@@ -28,8 +28,8 @@ const String Ready = 'Ready to Begin';
 const String Testing = 'Take a Test';
 
 class TestArgs {
-  final String TestName;
-  final int TestNum;
-  TestArgs(this.TestName, this.TestNum);
+  final String testName;
+  final int testNum;
+  TestArgs(this.testName, this.testNum);
 }
 //TODO Individual Routes for separate Profiles?

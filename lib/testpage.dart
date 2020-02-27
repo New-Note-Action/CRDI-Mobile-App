@@ -19,25 +19,20 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:crdi_mobile_app/profiles/profile1.dart';
 import 'package:crdi_mobile_app/profiles/profile2.dart';
 import 'package:crdi_mobile_app/profiles/profile3.dart';
 import 'package:crdi_mobile_app/profiles/profile4.dart';
 import 'package:crdi_mobile_app/profiles/profile5.dart';
 
-
 //import 'package:crdi_mobile_app/core/config.dart';
 
-
-
-
+// ignore: must_be_immutable
 class TestingPage extends StatelessWidget {
   //int _value = 1;
 
   int profile = 1;
-
-
 
   int joystickX = 0;
   int joystickY = 0;
@@ -45,30 +40,29 @@ class TestingPage extends StatelessWidget {
   int sliderValue = 0;
 
   @override
+  // ignore: missing_return
   Widget build(BuildContext context) {
     print(MediaQuery.of(context).size.width);
     print(MediaQuery.of(context).size.height);
 
     if (profile == 1) {
-      return profile1();
+      return Profile1();
     }
 
     if (profile == 2) {
-      return profile2();
+      return Profile2();
     }
 
     if (profile == 3) {
-      return profile3();
+      return Profile3();
     }
 
     if (profile == 4) {
-      return profile4();
+      return Profile4();
     }
 
     if (profile == 5) {
-      return profile5();
+      return Profile5();
     }
   }
-
-
 }
