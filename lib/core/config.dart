@@ -18,7 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void portraitMode() {
@@ -29,6 +29,7 @@ void portraitMode() {
 }
 
 void landscapeMode() {
+  enterFullscreen();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
@@ -36,6 +37,7 @@ void landscapeMode() {
 }
 
 void enableRotation() {
+  exitFullscreen();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -50,11 +52,4 @@ void enterFullscreen() {
 
 void exitFullscreen() {
   SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
-}
-
-// TODO Complete Theme
-ThemeData mainTheme() {
-  return ThemeData(
-    brightness: Brightness.dark,
-  );
 }

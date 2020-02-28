@@ -20,7 +20,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/drawer.dart';
 

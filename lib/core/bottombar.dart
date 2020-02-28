@@ -19,7 +19,7 @@
 */
 
 import 'package:crdi_mobile_app/core/config.dart';
-import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:flutter/material.dart';
 //import 'package:crdi_mobile_app/test.dart';
 import 'package:crdi_mobile_app/vibrate.dart';

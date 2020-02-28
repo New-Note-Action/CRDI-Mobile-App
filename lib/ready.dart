@@ -24,7 +24,7 @@
 
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
-import 'package:crdi_mobile_app/route_names.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
 //import 'package:crdi_mobile_app/core/config.dart';
 
 class ReadyPage extends StatelessWidget {
@@ -33,7 +33,7 @@ class ReadyPage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       body: Container(
-        color: Colors.black,
+        color: Color(0x00000000),
         child: Column(children: <Widget>[
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,32 +71,19 @@ class ReadyPage extends StatelessWidget {
             ],
           ),
           Spacer(),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.blueGrey,
-                    border: Border(
-                      top: BorderSide(width: 3, color: Colors.white30),
-                      left: BorderSide(width: 3, color: Colors.white30),
-                      right: BorderSide(width: 3, color: Colors.white30),
-                      bottom: BorderSide(width: 3, color: Colors.white30),
-                    ),
-                  ),
-
-                  //width: MediaQuery.of(context).size.width * 0.8,
-                  height: MediaQuery.of(context).size.height * 0.1,
-                  child: FlatButton(
-                    onPressed: () {
-                      print("Start was Pressed");
-                      Navigator.pushNamed(context, Testing);
-                    },
-                    child: Text('Start', style: TextStyle(color: Colors.white)),
-                  )),
-            ],
+          //Row(
+          //crossAxisAlignment: CrossAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          //children: [
+          RaisedButton(
+            onPressed: () {
+              print("Start was Pressed");
+              Navigator.pushNamed(context, Testing);
+            },
+            child: Text('Start', style: TextStyle(color: Colors.white)),
           ),
+          //],
+          //),
           Spacer(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -112,10 +99,8 @@ class ReadyPage extends StatelessWidget {
                       bottom: BorderSide(width: 3, color: Colors.white30),
                     ),
                   ),
-
-                  //width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.height * 0.1,
-                  child: FlatButton(
+                  child: RaisedButton(
                     onPressed: () {
                       print("Back was Pressed");
                     },

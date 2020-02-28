@@ -19,7 +19,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:crdi_mobile_app/profiles/profile1.dart';
 import 'package:crdi_mobile_app/profiles/profile2.dart';
 import 'package:crdi_mobile_app/profiles/profile3.dart';
@@ -42,38 +42,27 @@ class TestingPage extends StatelessWidget {
   @override
   // ignore: missing_return
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    print(MediaQuery.of(context).size.width);
+    print(MediaQuery.of(context).size.height);
 
     if (profile == 1) {
-//      return SafeArea(
-//        child: Profile1(),
-//      );
       return Profile1();
     }
 
     if (profile == 2) {
-//      return SafeArea(
-//        child: Profile2()
-//      );
       return Profile2();
     }
 
     if (profile == 3) {
-      return SafeArea(
-        child: Profile3(),
-      );
+      return Profile3();
     }
 
     if (profile == 4) {
-      return SafeArea(
-        child: Profile4(),
-      );
+      return Profile4();
     }
 
     if (profile == 5) {
-      return SafeArea(
-        child: Profile5(),
-      );
+      return Profile5();
     }
   }
 }
