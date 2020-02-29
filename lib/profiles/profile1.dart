@@ -12,32 +12,33 @@ class Profile1 extends StatelessWidget {
     print(ScreenUtil.bottomBarHeight);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Column(children: <Widget>[
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: Color(0x00000000),
-                border: Border(
-                  top: BorderSide(width: 1.0, color: Colors.white30),
-                  left: BorderSide(width: 1.0, color: Colors.white30),
-                  //right: BorderSide(width: 1.0, color: Colors.white30),
-                  bottom: BorderSide(width: 1.0, color: Colors.white30),
+      body: Column(
+        children: <Widget>[
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                  color: Color(0x00000000),
+                  border: Border(
+                    top: BorderSide(width: 1.0, color: Colors.white30),
+                    left: BorderSide(width: 1.0, color: Colors.white30),
+                    //right: BorderSide(width: 1.0, color: Colors.white30),
+                    bottom: BorderSide(width: 1.0, color: Colors.white30),
+                  ),
+                ),
+                width: ScreenUtil.screenWidthDp * 0.8,
+                height: ScreenUtil.screenHeightDp * 0.4,
+                child: Container(
+                  margin: const EdgeInsets.all(10.0),
+                  child: Text(
+                      'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                      style: TextStyle(color: Colors.white),
+                      textAlign: TextAlign.center),
+                  alignment: Alignment(0.0, 0.0),
                 ),
               ),
-              width: ScreenUtil.screenWidthDp * 0.8,
-              height: ScreenUtil.screenHeightDp * 0.4,
-              child: Container(
-                margin: const EdgeInsets.all(10.0),
-                child: Text(
-                    'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
-                    style: TextStyle(color: Colors.white),
-                    textAlign: TextAlign.center),
-                alignment: Alignment(0.0, 0.0),
-              ),
-            ),
-            Container(
+              Container(
                 width: ScreenUtil.screenWidthDp * 0.2,
                 height: ScreenUtil.screenHeightDp * 0.4,
                 decoration: const BoxDecoration(
@@ -58,50 +59,54 @@ class Profile1 extends StatelessWidget {
                     _showDialog(context);
                     print("Pause Button Hit");
                   },
-                )),
-          ],
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: ScreenUtil.screenWidthDp * 0.333,
-              height: ScreenUtil.screenHeightDp * 0.6,
-              child: Column(
-                children: [
-                  Spacer(),
-                  AddButton(),
-                  Spacer(),
-                  Text('Excited\n', style: TextStyle(color: Colors.white)),
-                  Spacer(),
-                ],
-              ),
-              decoration: const BoxDecoration(
-                color: Color(0x00000000),
-                border: Border(
-                  //top: BorderSide(width: 1.0, color: Colors.black),
-                  left: BorderSide(width: 1.0, color: Colors.white30),
-                  right: BorderSide(width: 1.0, color: Colors.black),
-                  bottom: BorderSide(width: 1.0, color: Colors.black),
                 ),
               ),
-            ),
-            Container(
-              width: ScreenUtil.screenWidthDp * 0.334,
-              height: ScreenUtil.screenHeightDp * 0.6,
-              decoration: const BoxDecoration(
-                color: Color(0x00000000),
-                border: Border(
-                  //top: BorderSide(width: 1.0, color: Colors.black),
-                  left: BorderSide(width: 1.0, color: Colors.black),
-                  right: BorderSide(width: 1.0, color: Colors.black),
-                  bottom: BorderSide(width: 1.0, color: Colors.black),
-                ),
-              ),
-              child: Container(
-                margin:
-                    const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: ScreenUtil.screenWidthDp * 0.333,
+                height: ScreenUtil.screenHeightDp * 0.6,
                 child: Column(
+                  children: [
+                    Spacer(),
+                    AddButton(),
+                    Spacer(),
+                    Text(
+                      'Excited\n',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Spacer(),
+                  ],
+                ),
+                decoration: const BoxDecoration(
+                  color: Color(0x00000000),
+                  border: Border(
+                    //top: BorderSide(width: 1.0, color: Colors.black),
+                    left: BorderSide(width: 1.0, color: Colors.white30),
+                    right: BorderSide(width: 1.0, color: Colors.black),
+                    bottom: BorderSide(width: 1.0, color: Colors.black),
+                  ),
+                ),
+              ),
+              Container(
+                width: ScreenUtil.screenWidthDp * 0.334,
+                height: ScreenUtil.screenHeightDp * 0.6,
+                decoration: const BoxDecoration(
+                  color: Color(0x00000000),
+                  border: Border(
+                    //top: BorderSide(width: 1.0, color: Colors.black),
+                    left: BorderSide(width: 1.0, color: Colors.black),
+                    right: BorderSide(width: 1.0, color: Colors.black),
+                    bottom: BorderSide(width: 1.0, color: Colors.black),
+                  ),
+                ),
+                child: Container(
+                  margin:
+                      const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -121,15 +126,18 @@ class Profile1 extends StatelessWidget {
                         ),
                       ),
                       Spacer(),
-                      Text('Happiness\n',
-                          style: TextStyle(color: Colors.white)),
-                    ]),
+                      Text(
+                        'Happiness\n',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-            Container(
-              width: ScreenUtil.screenWidthDp * 0.333,
-              height: ScreenUtil.screenHeightDp * 0.6,
-              child: Column(
+              Container(
+                width: ScreenUtil.screenWidthDp * 0.333,
+                height: ScreenUtil.screenHeightDp * 0.6,
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
@@ -137,22 +145,27 @@ class Profile1 extends StatelessWidget {
                     //slider goes here
                     SliderExample(),
                     Spacer(),
-                    Text('Tension\n', style: TextStyle(color: Colors.white)),
-                  ]),
-              alignment: Alignment(0.0, 0.0),
-              decoration: const BoxDecoration(
-                color: Color(0x00000000),
-                border: Border(
-                  //top: BorderSide(width: 1.0, color: Colors.black),
-                  left: BorderSide(width: 1.0, color: Colors.black),
-                  right: BorderSide(width: 1.0, color: Colors.white30),
-                  bottom: BorderSide(width: 1.0, color: Colors.black),
+                    Text(
+                      'Tension\n',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+                alignment: Alignment(0.0, 0.0),
+                decoration: const BoxDecoration(
+                  color: Color(0x00000000),
+                  border: Border(
+                    //top: BorderSide(width: 1.0, color: Colors.black),
+                    left: BorderSide(width: 1.0, color: Colors.black),
+                    right: BorderSide(width: 1.0, color: Colors.white30),
+                    bottom: BorderSide(width: 1.0, color: Colors.black),
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-      ]),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

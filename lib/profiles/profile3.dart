@@ -16,32 +16,33 @@ class Profile3 extends StatelessWidget {
           Flexible(
             flex: 4,
             fit: FlexFit.tight,
-            child: Row(children: [
-              Expanded(
-                flex: 7,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black87,
-                    border: Border(
-                      top: BorderSide(width: 1.0, color: Colors.white30),
-                      left: BorderSide(width: 1.0, color: Colors.white30),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.black87,
+                      border: Border(
+                        top: BorderSide(width: 1.0, color: Colors.white30),
+                        left: BorderSide(width: 1.0, color: Colors.white30),
 //right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.white30),
+                        bottom: BorderSide(width: 1.0, color: Colors.white30),
+                      ),
+                    ),
+                    child: Container(
+                      margin: const EdgeInsets.all(10.0),
+                      child: Text(
+                          'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                          style: TextStyle(color: Colors.white),
+                          textAlign: TextAlign.center),
+                      alignment: Alignment(0.0, 0.0),
                     ),
                   ),
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    child: Text(
-                        'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
-                        style: TextStyle(color: Colors.white),
-                        textAlign: TextAlign.center),
-                    alignment: Alignment(0.0, 0.0),
-                  ),
                 ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Container(
+                Expanded(
+                  flex: 3,
+                  child: Container(
                     height: double.infinity,
                     decoration: const BoxDecoration(
                       color: Colors.black87,
@@ -61,51 +62,57 @@ class Profile3 extends StatelessWidget {
                         _showDialog(context);
                         print("Pause Button Hit");
                       },
-                    )),
-              )
-            ]),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
           Flexible(
             flex: 6,
             fit: FlexFit.tight,
-            child: Row(children: [
-              Expanded(
-                child: Container(
-                  child: Column(
-                    children: [
-                      Spacer(),
-                      AddButton(),
-                      Spacer(),
-                      Text('Excited\n', style: TextStyle(color: Colors.white)),
-                      Spacer(),
-                    ],
-                  ),
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    border: Border(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Spacer(),
+                        AddButton(),
+                        Spacer(),
+                        Text(
+                          'Excited\n',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Spacer(),
+                      ],
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                        left: BorderSide(width: 1.0, color: Colors.black),
+                        right: BorderSide(width: 1.0, color: Colors.white30),
+                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
-                    ),
-                  ),
+                Expanded(
                   child: Container(
-                    margin:
-                    const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
-                    child: Column(
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: Border(
+//top: BorderSide(width: 1.0, color: Colors.black),
+                        left: BorderSide(width: 1.0, color: Colors.black),
+                        right: BorderSide(width: 1.0, color: Colors.white30),
+                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                      ),
+                    ),
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                          top: 3.0, left: 10.0, right: 10.0),
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
@@ -119,15 +126,18 @@ class Profile3 extends StatelessWidget {
                             ),
                           ),
                           Spacer(),
-                          Text('Happiness\n',
-                              style: TextStyle(color: Colors.white)),
-                        ]),
+                          Text(
+                            'Happiness\n',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Container(
-                  child: Column(
+                Expanded(
+                  child: Container(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
@@ -135,25 +145,26 @@ class Profile3 extends StatelessWidget {
 //slider goes here
                         SliderExample(),
                         Spacer(),
-                        Text('Tension\n',
-                            style: TextStyle(color: Colors.white)),
-                      ]),
-
-
-                  alignment: Alignment(0.0, 0.0),
-
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    border: Border(
+                        Text(
+                          'Tension\n',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    alignment: Alignment(0.0, 0.0),
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                        left: BorderSide(width: 1.0, color: Colors.black),
+                        right: BorderSide(width: 1.0, color: Colors.white30),
+                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                      ),
                     ),
                   ),
-                ),
-              )
-            ]),
+                )
+              ],
+            ),
           ),
         ],
       ),

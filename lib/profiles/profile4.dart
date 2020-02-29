@@ -7,32 +7,33 @@ class Profile4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: <Widget>[
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.black87,
-                border: Border(
-                  top: BorderSide(width: 1.0, color: Colors.white30),
-                  left: BorderSide(width: 1.0, color: Colors.white30),
+      body: Column(
+        children: <Widget>[
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                  color: Colors.black87,
+                  border: Border(
+                    top: BorderSide(width: 1.0, color: Colors.white30),
+                    left: BorderSide(width: 1.0, color: Colors.white30),
 //right: BorderSide(width: 1.0, color: Colors.white30),
-                  bottom: BorderSide(width: 1.0, color: Colors.white30),
+                    bottom: BorderSide(width: 1.0, color: Colors.white30),
+                  ),
+                ),
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: MediaQuery.of(context).size.height * 0.4,
+                child: Container(
+                  margin: const EdgeInsets.all(10.0),
+                  child: Text(
+                      'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                      style: TextStyle(color: Colors.white),
+                      textAlign: TextAlign.center),
+                  alignment: Alignment(0.0, 0.0),
                 ),
               ),
-              width: MediaQuery.of(context).size.width * 0.8,
-              height: MediaQuery.of(context).size.height * 0.4,
-              child: Container(
-                margin: const EdgeInsets.all(10.0),
-                child: Text(
-                    'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
-                    style: TextStyle(color: Colors.white),
-                    textAlign: TextAlign.center),
-                alignment: Alignment(0.0, 0.0),
-              ),
-            ),
-            Container(
+              Container(
                 width: MediaQuery.of(context).size.width * 0.2,
                 height: MediaQuery.of(context).size.height * 0.4,
                 decoration: const BoxDecoration(
@@ -53,41 +54,42 @@ class Profile4 extends StatelessWidget {
                     _showDialog(context);
                     print("Pause Button Hit");
                   },
-                )),
-          ],
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width * 0.333,
-              height: MediaQuery.of(context).size.height * 0.6,
-              decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                  left: BorderSide(width: 1.0, color: Colors.white30),
-                  right: BorderSide(width: 1.0, color: Colors.black),
-                  bottom: BorderSide(width: 1.0, color: Colors.black),
                 ),
               ),
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.334,
-              height: MediaQuery.of(context).size.height * 0.6,
-              decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: Border(
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width * 0.333,
+                height: MediaQuery.of(context).size.height * 0.6,
+                decoration: const BoxDecoration(
+                  color: Colors.grey,
+                  border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
-                  left: BorderSide(width: 1.0, color: Colors.black),
-                  right: BorderSide(width: 1.0, color: Colors.black),
-                  bottom: BorderSide(width: 1.0, color: Colors.black),
+                    left: BorderSide(width: 1.0, color: Colors.white30),
+                    right: BorderSide(width: 1.0, color: Colors.black),
+                    bottom: BorderSide(width: 1.0, color: Colors.black),
+                  ),
                 ),
               ),
-              child: Container(
-                margin:
-                    const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
-                child: Column(
+              Container(
+                width: MediaQuery.of(context).size.width * 0.334,
+                height: MediaQuery.of(context).size.height * 0.6,
+                decoration: const BoxDecoration(
+                  color: Colors.grey,
+                  border: Border(
+//top: BorderSide(width: 1.0, color: Colors.black),
+                    left: BorderSide(width: 1.0, color: Colors.black),
+                    right: BorderSide(width: 1.0, color: Colors.black),
+                    bottom: BorderSide(width: 1.0, color: Colors.black),
+                  ),
+                ),
+                child: Container(
+                  margin:
+                      const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -106,34 +108,39 @@ class Profile4 extends StatelessWidget {
                         ),
                       ),
                       Spacer(),
-                      Text('Happiness\n',
-                          style: TextStyle(color: Colors.white)),
-                    ]),
+                      Text(
+                        'Happiness\n',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.333,
-              height: MediaQuery.of(context).size.height * 0.6,
-              child: Column(
+              Container(
+                width: MediaQuery.of(context).size.width * 0.333,
+                height: MediaQuery.of(context).size.height * 0.6,
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
 //slider goes here
-                  ]),
-              alignment: Alignment(0.0, 0.0),
-              decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: Border(
+                  ],
+                ),
+                alignment: Alignment(0.0, 0.0),
+                decoration: const BoxDecoration(
+                  color: Colors.grey,
+                  border: Border(
 //top: BorderSide(width: 1.0, color: Colors.black),
-                  left: BorderSide(width: 1.0, color: Colors.black),
-                  right: BorderSide(width: 1.0, color: Colors.white30),
-                  bottom: BorderSide(width: 1.0, color: Colors.black),
+                    left: BorderSide(width: 1.0, color: Colors.black),
+                    right: BorderSide(width: 1.0, color: Colors.white30),
+                    bottom: BorderSide(width: 1.0, color: Colors.black),
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-      ]),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
