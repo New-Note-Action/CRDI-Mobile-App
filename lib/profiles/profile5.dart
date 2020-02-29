@@ -173,10 +173,3 @@ void _showDialog(context) {
     },
   );
 }
-
-class SliderExample extends StatefulWidget {
-  @override
-  SliderExampleState createState() {
-    return SliderExampleState();
-  }
-}
