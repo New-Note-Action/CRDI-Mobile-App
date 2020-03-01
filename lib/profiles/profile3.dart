@@ -6,6 +6,7 @@ import 'package:crdi_mobile_app/inputs/button.dart';
 import 'package:crdi_mobile_app/inputs/joystick.dart';
 
 import 'package:crdi_mobile_app/inputs/slider.dart';
+import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
 class Profile3 extends StatelessWidget {
   @override
@@ -21,15 +22,7 @@ class Profile3 extends StatelessWidget {
                 Expanded(
                   flex: 7,
                   child: Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.black87,
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.white30),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-//right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.white30),
-                      ),
-                    ),
+                    decoration: profilePartNonControlDecoration,
                     child: Container(
                       margin: const EdgeInsets.all(10.0),
                       child: Text(
@@ -44,15 +37,7 @@ class Profile3 extends StatelessWidget {
                   flex: 3,
                   child: Container(
                     height: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: Colors.black87,
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.white30),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-                        right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.white30),
-                      ),
-                    ),
+                    decoration: profilePartNonControlDecoration,
                     child: IconButton(
                       alignment: Alignment(0.0, 0.0),
                       icon: Icon(Icons.pause_circle_outline),
@@ -87,28 +72,12 @@ class Profile3 extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.black),
-                        right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
-                      ),
-                    ),
+                    decoration: profilePartControlDecoration,
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.black),
-                        right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
-                      ),
-                    ),
+                    decoration: profilePartControlDecoration,
                     child: Container(
                       margin: const EdgeInsets.only(
                           top: 3.0, left: 10.0, right: 10.0),
@@ -152,15 +121,7 @@ class Profile3 extends StatelessWidget {
                       ],
                     ),
                     alignment: Alignment(0.0, 0.0),
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.black),
-                        right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
-                      ),
-                    ),
+                    decoration: profilePartControlDecoration,
                   ),
                 )
               ],

@@ -3,6 +3,7 @@ import 'package:control_pad/control_pad.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/inputs/button.dart';
 import 'package:crdi_mobile_app/inputs/slider.dart';
+import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
 class Profile5 extends StatelessWidget {
   @override
@@ -14,15 +15,7 @@ class Profile5 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                decoration: const BoxDecoration(
-                  color: Colors.black87,
-                  border: Border(
-                    top: BorderSide(width: 1.0, color: Colors.white30),
-                    left: BorderSide(width: 1.0, color: Colors.white30),
-//right: BorderSide(width: 1.0, color: Colors.white30),
-                    bottom: BorderSide(width: 1.0, color: Colors.white30),
-                  ),
-                ),
+                decoration: profilePartNonControlDecoration,
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: MediaQuery.of(context).size.height * 0.4,
                 child: Container(
@@ -37,15 +30,7 @@ class Profile5 extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width * 0.2,
                 height: MediaQuery.of(context).size.height * 0.4,
-                decoration: const BoxDecoration(
-                  color: Colors.black87,
-                  border: Border(
-                    top: BorderSide(width: 1.0, color: Colors.white30),
-                    left: BorderSide(width: 1.0, color: Colors.white30),
-                    right: BorderSide(width: 1.0, color: Colors.white30),
-                    bottom: BorderSide(width: 1.0, color: Colors.white30),
-                  ),
-                ),
+                decoration: profilePartNonControlDecoration,
                 child: IconButton(
                   alignment: Alignment(0.0, 0.0),
                   icon: Icon(Icons.pause_circle_outline),
@@ -66,28 +51,12 @@ class Profile5 extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.333,
                 height: MediaQuery.of(context).size.height * 0.6,
                 child: AddButton(),
-                decoration: const BoxDecoration(
-                  color: Colors.grey,
-                  border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                    left: BorderSide(width: 1.0, color: Colors.white30),
-                    right: BorderSide(width: 1.0, color: Colors.black),
-                    bottom: BorderSide(width: 1.0, color: Colors.black),
-                  ),
-                ),
+                decoration: profilePartControlDecoration,
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.334,
                 height: MediaQuery.of(context).size.height * 0.6,
-                decoration: const BoxDecoration(
-                  color: Colors.grey,
-                  border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                    left: BorderSide(width: 1.0, color: Colors.black),
-                    right: BorderSide(width: 1.0, color: Colors.black),
-                    bottom: BorderSide(width: 1.0, color: Colors.black),
-                  ),
-                ),
+                decoration: profilePartControlDecoration,
                 child: Container(
                   margin:
                       const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
@@ -136,15 +105,7 @@ class Profile5 extends StatelessWidget {
                   ],
                 ),
                 alignment: Alignment(0.0, 0.0),
-                decoration: const BoxDecoration(
-                  color: Colors.grey,
-                  border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                    left: BorderSide(width: 1.0, color: Colors.black),
-                    right: BorderSide(width: 1.0, color: Colors.white30),
-                    bottom: BorderSide(width: 1.0, color: Colors.black),
-                  ),
-                ),
+                decoration: profilePartControlDecoration,
               ),
             ],
           ),

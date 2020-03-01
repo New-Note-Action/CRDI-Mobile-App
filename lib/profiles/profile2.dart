@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/inputs/button.dart';
 import 'package:crdi_mobile_app/inputs/slider.dart';
+import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
 class Profile2 extends StatelessWidget {
   @override
@@ -15,15 +16,7 @@ class Profile2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.black87,
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.white30),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-//right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.white30),
-                      ),
-                    ),
+                    decoration: profilePartNonControlDecoration,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.4,
                     child: Container(
@@ -38,15 +31,7 @@ class Profile2 extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width * 0.2,
                     height: MediaQuery.of(context).size.height * 0.4,
-                    decoration: const BoxDecoration(
-                      color: Colors.black87,
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.white30),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-                        right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.white30),
-                      ),
-                    ),
+                    decoration: profilePartNonControlDecoration,
                     child: IconButton(
                       alignment: Alignment(0.0, 0.0),
                       icon: Icon(Icons.pause_circle_outline),
@@ -77,15 +62,7 @@ class Profile2 extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-                        right: BorderSide(width: 1.0, color: Colors.black),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
-                      ),
-                    ),
+                    decoration: profilePartControlDecoration,
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.333,
@@ -101,15 +78,7 @@ class Profile2 extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-                        right: BorderSide(width: 1.0, color: Colors.black),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
-                      ),
-                    ),
+                    decoration: profilePartControlDecoration,
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.333,
@@ -125,15 +94,7 @@ class Profile2 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-                        right: BorderSide(width: 1.0, color: Colors.black),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
-                      ),
-                    ),
+                    decoration: profilePartControlDecoration,
                   ),
                 ],
               ),
