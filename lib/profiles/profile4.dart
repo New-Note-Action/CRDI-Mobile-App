@@ -36,7 +36,7 @@ class Profile4 extends StatelessWidget {
                   color: Colors.white,
                   iconSize: MediaQuery.of(context).size.width * 0.1,
                   onPressed: () {
-                    _showDialog(context);
+                    profilePauseDialog(context);
                     print("Pause Button Hit");
                   },
                 ),
@@ -104,34 +104,4 @@ class Profile4 extends StatelessWidget {
       ),
     );
   }
-}
-
-void _showDialog(context) {
-  // flutter defined function
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      // return object of type Dialog
-      return AlertDialog(
-        title: new Text("Test Paused"),
-        //content: new Text("Resume Or End"),
-        actions: <Widget>[
-          // usually buttons at the bottom of the dialog
-          new FlatButton(
-            child: new Text("Resume"),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-          new FlatButton(
-            child: new Text("End"),
-            onPressed: () {
-              Navigator.of(context)
-                  .pushNamedAndRemoveUntil(MainMenu, (_) => false);
-            },
-          ),
-        ],
-      );
-    },
-  );
 }

@@ -20,6 +20,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:crdi_mobile_app/route_settings.dart';
 
 final BoxDecoration profilePartNonControlDecoration = BoxDecoration(
   color: Color(0x00000000),
@@ -40,3 +41,33 @@ final BoxDecoration profilePartControlDecoration = BoxDecoration(
     bottom: BorderSide(width: 1.0, color: Colors.black),
   ),
 );
+
+void profilePauseDialog(context) {
+  // flutter defined function
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      // return object of type Dialog
+      return AlertDialog(
+        title: new Text("Test Paused"),
+        //content: new Text("Resume Or End"),
+        actions: <Widget>[
+          // usually buttons at the bottom of the dialog
+          new FlatButton(
+            child: new Text("Resume"),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          new FlatButton(
+            child: new Text("End"),
+            onPressed: () {
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil(MainMenu, (_) => false);
+            },
+          ),
+        ],
+      );
+    },
+  );
+}
