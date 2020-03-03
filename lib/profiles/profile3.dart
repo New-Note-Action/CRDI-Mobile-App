@@ -20,7 +20,7 @@ class Profile3 extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  flex: 7,
+                  flex: 8,
                   child: Container(
                     decoration: profilePartNonControlDecoration,
                     child: Container(
@@ -34,7 +34,7 @@ class Profile3 extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 3,
+                  flex: 2,
                   child: Container(
                     height: double.infinity,
                     decoration: profilePartNonControlDecoration,
