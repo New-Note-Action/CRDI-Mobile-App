@@ -26,6 +26,7 @@ class Profile3 extends StatelessWidget {
                     child: Container(
                       margin: const EdgeInsets.all(10.0),
                       child: Text(
+                          'PROFILE: 03\n\n'
                           'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
                           style: TextStyle(color: Colors.white),
                           textAlign: TextAlign.center),
