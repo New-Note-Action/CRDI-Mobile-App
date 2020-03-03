@@ -15,9 +15,8 @@ class Profile3 extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Column(
         children: <Widget>[
-          Flexible(
+          Expanded(
             flex: 4,
-            fit: FlexFit.tight,
             child: Row(
               children: [
                 Expanded(
@@ -54,9 +53,8 @@ class Profile3 extends StatelessWidget {
               ],
             ),
           ),
-          Flexible(
+          Expanded(
             flex: 6,
-            fit: FlexFit.tight,
             child: Row(
               children: [
                 Expanded(
