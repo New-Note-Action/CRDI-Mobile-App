@@ -31,63 +31,86 @@ class CRDIApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new DynamicTheme(
-        defaultBrightness: Brightness.dark,
-        data: (brightness) => new ThemeData(
-              brightness: brightness,
-              scaffoldBackgroundColor: (brightness == Brightness.dark)
-                  ? Color(0xFF222222)
-                  : Color(0xFFF5F2E5),
-              appBarTheme: new AppBarTheme(
-                brightness: brightness,
-                color: (brightness == Brightness.dark)
-                    ? Color(0xFF322365)
-                    : Color(0xFFE9D69C),
-                textTheme: new TextTheme(
-                  title: new TextStyle(
-                    color: (brightness == Brightness.dark)
-                        ? Color(0xFFFFFFFF)
-                        : Color(0xFF606060),
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                iconTheme: new IconThemeData(
-                  color: (brightness == Brightness.dark)
-                      ? Color(0xFFFFFFFF)
-                      : Color(0xFF606060),
-                ),
-              ),
-              bottomAppBarColor: (brightness == Brightness.dark)
-                  ? Color(0xFF322365)
-                  : Color(0xFFE9D69C),
-              iconTheme: new IconThemeData(
-                color: (brightness == Brightness.dark)
-                    ? Color(0xFFFFFFFF)
-                    : Color(0xFF606060),
-              ),
-              buttonTheme: new ButtonThemeData(
-                buttonColor: (brightness == Brightness.dark)
-                    ? Color(0xFF322365)
-                    : Color(0xFFE9D69C),
-                //disabledColor: Color(0xFF000000),
-                //focusColor: Color(0xFF000000),
-                //hoverColor: Color(0xFF000000),
-                //highlightColor: Color(0xFF000000),
-                splashColor: (brightness == Brightness.dark)
-                  ? Color(0xFF322365)
-                  : Color(0xFFE9D69C),
-                padding: EdgeInsets.all(8.0),
-                materialTapTargetSize: MaterialTapTargetSize.padded,
-              ),
+      defaultBrightness: Brightness.dark,
+      data: (brightness) => new ThemeData(
+        brightness: brightness,
+        scaffoldBackgroundColor: (brightness == Brightness.dark)
+            ? Color(0xFF222222)
+            : Color(0xFFF5F2E5),
+        appBarTheme: new AppBarTheme(
+          brightness: brightness,
+          color: (brightness == Brightness.dark)
+              ? Color(0xFF322365)
+              : Color(0xFFE9D69C),
+          textTheme: new TextTheme(
+            title: new TextStyle(
+              color: (brightness == Brightness.dark)
+                  ? Color(0xFFFFFFFF)
+                  : Color(0xFF606060),
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
             ),
-        themedWidgetBuilder: (context, theme) {
-          return MaterialApp(
-            title: 'CRDI Mobile App',
-            theme: theme,
-            onGenerateRoute: router.generateRoute,
-            initialRoute: MainMenu,
-          );
-        });
+          ),
+          iconTheme: new IconThemeData(
+            color: (brightness == Brightness.dark)
+                ? Color(0xFFFFFFFF)
+                : Color(0xFF606060),
+          ),
+        ),
+        bottomAppBarColor: (brightness == Brightness.dark)
+            ? Color(0xFF322365)
+            : Color(0xFFE9D69C),
+        iconTheme: new IconThemeData(
+          color: (brightness == Brightness.dark)
+              ? Color(0xFFFFFFFF)
+              : Color(0xFF606060),
+        ),
+        buttonTheme: new ButtonThemeData(
+          buttonColor: (brightness == Brightness.dark)
+              ? Color(0xFF322365)
+              : Color(0xFFE9D69C),
+          //disabledColor: Color(0xFF000000),
+          //focusColor: Color(0xFF000000),
+          //hoverColor: Color(0xFF000000),
+          //highlightColor: Color(0xFF000000),
+          splashColor: (brightness == Brightness.dark)
+              ? Color(0xFF322365)
+              : Color(0xFFE9D69C),
+        ),
+        textTheme: new TextTheme(
+          body1: new TextStyle(
+            color: (brightness == Brightness.dark)
+                ? Color(0xFFFFFFFF)
+                : Color(0xFF000000),
+          ),
+          display1: new TextStyle(
+            color: (brightness == Brightness.dark)
+                ? Color(0xFFFFFFFF)
+                : Color(0xFF000000),
+            fontSize: 32,
+          ),
+          button: new TextStyle(
+            color: (brightness == Brightness.dark)
+                ? Color(0xFFFFFFFF)
+                : Color(0xFF606060),
+          ),
+        ),
+        dividerTheme: new DividerThemeData(
+          thickness: 1,
+          color: (brightness == Brightness.dark)
+              ? Color(0xFFFFFFFF)
+              : Color(0xFF000000),
+        ),
+      ),
+      themedWidgetBuilder: (context, theme) {
+        return MaterialApp(
+          title: 'CRDI Mobile App',
+          theme: theme,
+          onGenerateRoute: router.generateRoute,
+          initialRoute: MainMenu,
+        );
+      },
+    );
   }
 }
 
