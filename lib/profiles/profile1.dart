@@ -19,7 +19,9 @@ class Profile1 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                decoration: profilePartNonControlDecoration,
+                decoration: makeNonControlDecoration(
+                  location: ProfileContainerLocation.leftmost,
+                ),
                 width: ScreenUtil.screenWidthDp * 0.8,
                 height: ScreenUtil.screenHeightDp * 0.4,
                 child: Container(
@@ -33,9 +35,11 @@ class Profile1 extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: makeNonControlDecoration(
+                  location: ProfileContainerLocation.rightmost,
+                ),
                 width: ScreenUtil.screenWidthDp * 0.2,
                 height: ScreenUtil.screenHeightDp * 0.4,
-                decoration: profilePartNonControlDecoration,
                 child: IconButton(
                   alignment: Alignment(0.0, 0.0),
                   icon: Icon(Icons.pause_circle_outline),
@@ -53,6 +57,9 @@ class Profile1 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
+                decoration: makeControlDecoration(
+                  location: ProfileContainerLocation.leftmost,
+                ),
                 width: ScreenUtil.screenWidthDp * 0.333,
                 height: ScreenUtil.screenHeightDp * 0.6,
                 child: Column(
@@ -67,12 +74,13 @@ class Profile1 extends StatelessWidget {
                     Spacer(),
                   ],
                 ),
-                decoration: profilePartControlDecoration,
               ),
               Container(
+                decoration: makeControlDecoration(
+                  location: ProfileContainerLocation.inner,
+                ),
                 width: ScreenUtil.screenWidthDp * 0.334,
                 height: ScreenUtil.screenHeightDp * 0.6,
-                decoration: profilePartControlDecoration,
                 child: Container(
                   margin:
                       const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
@@ -105,6 +113,9 @@ class Profile1 extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: makeControlDecoration(
+                  location: ProfileContainerLocation.rightmost,
+                ),
                 width: ScreenUtil.screenWidthDp * 0.333,
                 height: ScreenUtil.screenHeightDp * 0.6,
                 child: Column(
@@ -122,7 +133,6 @@ class Profile1 extends StatelessWidget {
                   ],
                 ),
                 alignment: Alignment(0.0, 0.0),
-                decoration: profilePartControlDecoration,
               ),
             ],
           ),

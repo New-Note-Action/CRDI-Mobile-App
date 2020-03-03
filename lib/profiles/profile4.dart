@@ -14,7 +14,9 @@ class Profile4 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                decoration: profilePartNonControlDecoration,
+                decoration: makeNonControlDecoration(
+                  location: ProfileContainerLocation.leftmost,
+                ),
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: MediaQuery.of(context).size.height * 0.4,
                 child: Container(
@@ -28,9 +30,11 @@ class Profile4 extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: makeNonControlDecoration(
+                  location: ProfileContainerLocation.rightmost,
+                ),
                 width: MediaQuery.of(context).size.width * 0.2,
                 height: MediaQuery.of(context).size.height * 0.4,
-                decoration: profilePartNonControlDecoration,
                 child: IconButton(
                   alignment: Alignment(0.0, 0.0),
                   icon: Icon(Icons.pause_circle_outline),
@@ -48,14 +52,18 @@ class Profile4 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
+                decoration: makeControlDecoration(
+                  location: ProfileContainerLocation.leftmost,
+                ),
                 width: MediaQuery.of(context).size.width * 0.333,
                 height: MediaQuery.of(context).size.height * 0.6,
-                decoration: profilePartControlDecoration,
               ),
               Container(
+                decoration: makeControlDecoration(
+                  location: ProfileContainerLocation.inner,
+                ),
                 width: MediaQuery.of(context).size.width * 0.334,
                 height: MediaQuery.of(context).size.height * 0.6,
-                decoration: profilePartControlDecoration,
                 child: Container(
                   margin:
                       const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
@@ -87,6 +95,9 @@ class Profile4 extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: makeControlDecoration(
+                  location: ProfileContainerLocation.rightmost,
+                ),
                 width: MediaQuery.of(context).size.width * 0.333,
                 height: MediaQuery.of(context).size.height * 0.6,
                 child: Column(
@@ -97,7 +108,6 @@ class Profile4 extends StatelessWidget {
                   ],
                 ),
                 alignment: Alignment(0.0, 0.0),
-                decoration: profilePartControlDecoration,
               ),
             ],
           ),

@@ -22,7 +22,9 @@ class Profile3 extends StatelessWidget {
                 Expanded(
                   flex: 8,
                   child: Container(
-                    decoration: profilePartNonControlDecoration,
+                    decoration: makeNonControlDecoration(
+                      location: ProfileContainerLocation.leftmost,
+                    ),
                     child: Container(
                       margin: const EdgeInsets.all(10.0),
                       child: Text(
@@ -37,8 +39,10 @@ class Profile3 extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Container(
+                    decoration: makeNonControlDecoration(
+                      location: ProfileContainerLocation.rightmost,
+                    ),
                     height: double.infinity,
-                    decoration: profilePartNonControlDecoration,
                     child: IconButton(
                       alignment: Alignment(0.0, 0.0),
                       icon: Icon(Icons.pause_circle_outline),
@@ -60,6 +64,9 @@ class Profile3 extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.leftmost,
+                    ),
                     child: Column(
                       children: [
                         Spacer(),
@@ -72,12 +79,13 @@ class Profile3 extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                    decoration: profilePartControlDecoration,
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: profilePartControlDecoration,
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.inner,
+                    ),
                     child: Container(
                       margin: const EdgeInsets.only(
                           top: 3.0, left: 10.0, right: 10.0),
@@ -90,7 +98,7 @@ class Profile3 extends StatelessWidget {
                             child: JoystickView(
                               iconsColor: Colors.white30,
                               backgroundColor: Colors.black54,
-                              innerCircleColor: Colors.black26,
+                              innerCircleColor: Color(0xFF222222),
                               size: MediaQuery.of(context).size.width * 0.26,
                             ),
                           ),
@@ -106,6 +114,9 @@ class Profile3 extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.rightmost,
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -121,7 +132,7 @@ class Profile3 extends StatelessWidget {
                       ],
                     ),
                     alignment: Alignment(0.0, 0.0),
-                    decoration: profilePartControlDecoration,
+
                   ),
                 )
               ],
