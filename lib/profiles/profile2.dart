@@ -16,7 +16,9 @@ class Profile2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    decoration: profilePartNonControlDecoration,
+                    decoration: makeNonControlDecoration(
+                      location: ProfileContainerLocation.leftmost,
+                    ),
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.4,
                     child: Container(
@@ -29,9 +31,11 @@ class Profile2 extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    decoration: makeNonControlDecoration(
+                      location: ProfileContainerLocation.rightmost,
+                    ),
                     width: MediaQuery.of(context).size.width * 0.2,
                     height: MediaQuery.of(context).size.height * 0.4,
-                    decoration: profilePartNonControlDecoration,
                     child: IconButton(
                       alignment: Alignment(0.0, 0.0),
                       icon: Icon(Icons.pause_circle_outline),
@@ -49,6 +53,9 @@ class Profile2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.leftmost,
+                    ),
                     width: MediaQuery.of(context).size.width * 0.333,
                     height: MediaQuery.of(context).size.height * 0.6,
                     child: Column(
@@ -62,9 +69,11 @@ class Profile2 extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                    decoration: profilePartControlDecoration,
                   ),
                   Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.inner,
+                    ),
                     width: MediaQuery.of(context).size.width * 0.333,
                     height: MediaQuery.of(context).size.height * 0.6,
                     child: Column(
@@ -78,9 +87,11 @@ class Profile2 extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                    decoration: profilePartControlDecoration,
                   ),
                   Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.rightmost,
+                    ),
                     width: MediaQuery.of(context).size.width * 0.333,
                     height: MediaQuery.of(context).size.height * 0.6,
                     child: Column(
@@ -94,7 +105,6 @@ class Profile2 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    decoration: profilePartControlDecoration,
                   ),
                 ],
               ),

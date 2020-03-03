@@ -22,20 +22,55 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
 
+enum ProfileContainerLocation {
+  leftmost,
+  inner,
+  rightmost,
+}
+
+BoxDecoration makeNonControlDecoration(
+    {@required ProfileContainerLocation location}) {
+  return BoxDecoration(
+    border: Border(
+      top: BorderSide(color: Colors.white30),
+      left: BorderSide(color: Colors.white30),
+      bottom: BorderSide(color: Colors.white30),
+      // FIXME: For value for false in following ternary:
+      // Fall back on Border's default value for 'right',
+      // instead of hard-coding its current default value.
+      right: (location == ProfileContainerLocation.rightmost)
+          ? BorderSide(color: Colors.white30)
+          : BorderSide.none,
+    ),
+  );
+}
+
 final BoxDecoration profilePartNonControlDecoration = BoxDecoration(
-  color: Color(0x00000000),
-  border: Border(
-    top: BorderSide(width: 1.0, color: Colors.white30),
-    left: BorderSide(width: 1.0, color: Colors.white30),
-    right: BorderSide(width: 1.0, color: Colors.white30),
-    bottom: BorderSide(width: 1.0, color: Colors.white30),
-  ),
+  border: Border.all(color: Colors.white30),
 );
 
+BoxDecoration makeControlDecoration(
+    {@required ProfileContainerLocation location}) {
+  return BoxDecoration(
+    border: Border(
+      left: BorderSide(
+        color: (location == ProfileContainerLocation.leftmost)
+            ? Colors.white30
+            : Colors.black,
+      ),
+      right: BorderSide(
+        color: (location == ProfileContainerLocation.rightmost)
+            ? Colors.white30
+            : Colors.black,
+      ),
+      bottom: BorderSide(color: Colors.black),
+    ),
+  );
+}
+
 final BoxDecoration profilePartControlDecoration = BoxDecoration(
-  color: Color(0x00000000),
   border: Border(
-    //top: BorderSide(width: 1.0, color: Colors.black),
+    top: BorderSide(width: 1.0, color: Colors.black),
     left: BorderSide(width: 1.0, color: Colors.white30),
     right: BorderSide(width: 1.0, color: Colors.black),
     bottom: BorderSide(width: 1.0, color: Colors.black),
