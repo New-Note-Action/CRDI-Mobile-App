@@ -21,9 +21,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'dart:async' show Future;
-import 'package:flutter/services.dart' show rootBundle;
+//import 'package:flutter/services.dart' show rootBundle;
 import 'package:crdi_mobile_app/core/topbar.dart';
-import 'package:crdi_mobile_app/core/config.dart';
+//import 'package:crdi_mobile_app/core/config.dart';
 import 'package:crdi_mobile_app/core/bottombar.dart';
 import 'package:crdi_mobile_app/drawer.dart';
 
@@ -46,7 +46,6 @@ class HowToClass extends StatelessWidget {
               body: Markdown(data: text.data),
             ),
           );
-        }
-    );
+        });
   }
 }

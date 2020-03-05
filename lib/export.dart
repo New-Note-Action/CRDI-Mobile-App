@@ -22,15 +22,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:crdi_mobile_app/route_settings.dart';
+//import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/drawer.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:simple_share/simple_share.dart';
 import 'package:flutter/services.dart';
-import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/core/bottombar.dart';
-import 'package:crdi_mobile_app/drawer.dart';
 
 class SubmitResults extends StatelessWidget {
   @override
@@ -79,7 +77,8 @@ class _ShareMenuState extends State<ShareMenu> {
             onPressed: () {
               SimpleShare.share(
                 title: "DR.C Test Results",
-                msg: "Attached are the results for test [ID]\n\nSent via DR.C app",
+                msg:
+                    "Attached are the results for test [ID]\n\nSent via DR.C app",
                 subject: "Test [ID] Results",
               );
             },
@@ -93,7 +92,8 @@ class _ShareMenuState extends State<ShareMenu> {
                 SimpleShare.share(
                   uri: uri.toString(),
                   title: "DR.C Test Results",
-                  msg: "Attached are the results for test [ID]\n\nSent via DR.C app",
+                  msg:
+                      "Attached are the results for test [ID]\n\nSent via DR.C app",
                   subject: "Test [ID] Results",
                 );
               }

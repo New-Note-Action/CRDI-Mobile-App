@@ -1,107 +1,125 @@
+import 'package:control_pad/control_pad.dart';
 import 'package:flutter/material.dart';
 
 import 'package:crdi_mobile_app/route_settings.dart';
+import 'package:crdi_mobile_app/inputs/button.dart';
+import 'package:crdi_mobile_app/inputs/joystick.dart';
 
 import 'package:crdi_mobile_app/inputs/slider.dart';
+import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
-
-class profile3 extends StatelessWidget {
+class Profile3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      resizeToAvoidBottomInset: false,
       body: Column(
-          children: <Widget>[
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Flexible(
+            flex: 4,
+            fit: FlexFit.tight,
+            child: Row(
               children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black87,
-                    border: Border(
-                      top: BorderSide(width: 1.0, color: Colors.white30),
-                      left: BorderSide(width: 1.0, color: Colors.white30),
-//right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.white30),
-                    ),
-                  ),
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.8,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.4,
+                Expanded(
+                  flex: 7,
                   child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    child: Text(
-                        'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
-                        style: TextStyle(color: Colors.white),
-                        textAlign: TextAlign.center),
-                    alignment: Alignment(0.0, 0.0),
-
+                    decoration: makeNonControlDecoration(
+                      location: ProfileContainerLocation.leftmost,
+                    ),
+                    child: Container(
+                      margin: const EdgeInsets.all(10.0),
+                      child: Text(
+                          'PROFILE: 03\n\n'
+                          'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                          style: TextStyle(color: Colors.white),
+                          textAlign: TextAlign.center),
+                      alignment: Alignment(0.0, 0.0),
+                    ),
                   ),
                 ),
-
-                Container(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width * 0.2,
-                    height: MediaQuery
-                        .of(context)
-                        .size
-                        .height * 0.4,
-
-                    decoration: const BoxDecoration(
-                      color: Colors.black87,
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.white30),
-                        left: BorderSide(width: 1.0, color: Colors.white30),
-                        right: BorderSide(width: 1.0, color: Colors.white30),
-                        bottom: BorderSide(width: 1.0, color: Colors.white30),
-                      ),
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    decoration: makeNonControlDecoration(
+                      location: ProfileContainerLocation.rightmost,
                     ),
-                    child:
-                    IconButton(
+                    height: double.infinity,
+                    child: IconButton(
                       alignment: Alignment(0.0, 0.0),
                       icon: Icon(Icons.pause_circle_outline),
                       color: Colors.white,
-
-
-                      iconSize: MediaQuery
-                          .of(context)
-                          .size
-                          .width * 0.1,
+                      iconSize: MediaQuery.of(context).size.width * 0.1,
                       onPressed: () {
-                        _showDialog(context);
+                        profilePauseDialog(context);
                         print("Pause Button Hit");
                       },
-
-                    )
-                ),
+                    ),
+                  ),
+                )
               ],
             ),
-
-
-            Row(
-
-              crossAxisAlignment: CrossAxisAlignment.start,
-
+          ),
+          Flexible(
+            flex: 6,
+            fit: FlexFit.tight,
+            child: Row(
               children: [
-                Container(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.333,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.6,
-
-
-                  child: Column(
+                Expanded(
+                  child: Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.leftmost,
+                    ),
+                    child: Column(
+                      children: [
+                        Spacer(),
+                        AddButton(),
+                        Spacer(),
+                        Text(
+                          'Excited\n',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Spacer(),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.inner,
+                    ),
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                          top: 3.0, left: 10.0, right: 10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Spacer(),
+                          Container(
+                            child: JoystickView(
+                              iconsColor: Colors.white30,
+                              backgroundColor: Colors.black54,
+                              innerCircleColor: Color(0xFF222222),
+                              size: MediaQuery.of(context).size.width * 0.26,
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Happiness\n',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: makeControlDecoration(
+                      location: ProfileContainerLocation.rightmost,
+                    ),
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
@@ -109,140 +127,21 @@ class profile3 extends StatelessWidget {
 //slider goes here
                         SliderExample(),
                         Spacer(),
-                        Text('Boredom\n',
-                            style: TextStyle(color: Colors.white)),
-                      ]),
-
-
-                  alignment: Alignment(0.0, 0.0),
-
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                        Text(
+                          'Tension\n',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
+                    alignment: Alignment(0.0, 0.0),
+
                   ),
-                ),
-
-                Container(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.333,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.6,
-
-
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Spacer(),
-//slider goes here
-                        SliderExample(),
-                        Spacer(),
-                        Text('Excitement\n',
-                            style: TextStyle(color: Colors.white)),
-                      ]),
-
-
-                  alignment: Alignment(0.0, 0.0),
-
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.333,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.6,
-
-
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Spacer(),
-//slider goes here
-                        SliderExample(),
-                        Spacer(),
-                        Text('Tension\n',
-                            style: TextStyle(color: Colors.white)),
-                      ]),
-
-
-                  alignment: Alignment(0.0, 0.0),
-
-                  decoration: const BoxDecoration(
-                    color: Colors.grey,
-                    border: Border(
-//top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.white30),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
-                    ),
-                  ),
-                ),
-
+                )
               ],
             ),
-
-          ]
+          ),
+        ],
       ),
     );
-  }
-}
-
-void _showDialog(context) {
-  // flutter defined function
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      // return object of type Dialog
-      return AlertDialog(
-        title: new Text("Test Paused"),
-        //content: new Text("Resume Or End"),
-        actions: <Widget>[
-          // usually buttons at the bottom of the dialog
-          new FlatButton(
-            child: new Text("Resume"),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-          new FlatButton(
-            child: new Text("End"),
-            onPressed: () {
-              Navigator.of(context).pushNamedAndRemoveUntil(MainMenu, (_) => false);
-            },
-          ),
-
-
-        ],
-      );
-    },
-  );
-}
-
-class SliderExample extends StatefulWidget {
-  @override
-  SliderExampleState createState() {
-    return SliderExampleState();
   }
 }

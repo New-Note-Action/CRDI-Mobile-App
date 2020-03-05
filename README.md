@@ -1,6 +1,6 @@
 # crdi_mobile_app
 
-A new Flutter application.
+2019-2020 Senior Project
 
 ## Getting Started
 

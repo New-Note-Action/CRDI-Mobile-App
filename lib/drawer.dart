@@ -47,7 +47,7 @@ class _DrawerSectionState extends State<DrawerSection> {
               ),
             ),
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
+              color: Theme.of(context).colorScheme.secondaryVariant,
             ),
           ),
           SwitchListTile(
@@ -77,7 +77,7 @@ class _DrawerSectionState extends State<DrawerSection> {
             },
           ),
           ListTile(
-            title: Text('Legal'),
+            title: Text('About and Legal'),
             onTap: () {
               VibrateDevice();
               Navigator.pushNamed(context, Legal);
