@@ -69,7 +69,6 @@ class BottomNavBar extends StatelessWidget {
                     VibrateDevice();
                     Navigator.pushNamedAndRemoveUntil(
                         context, MainMenu, (_) => false);
-                    portraitMode();
                   },
                 ),
                 Text('Home'),

@@ -84,7 +84,7 @@ class _DrawerSectionState extends State<DrawerSection> {
             },
           ),
           ListTile(
-            title: Text('How-to'),
+            title: Text('How To'),
             onTap: () {
               VibrateDevice();
               Navigator.pushNamed(context, HowTo);
