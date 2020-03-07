@@ -23,9 +23,12 @@ import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
 
 enum ProfileContainerLocation {
-  leftmost,
-  inner,
-  rightmost,
+  // Do not reorder these; the values for these enums are used in bitwise
+  // operations when generating borders.
+  inner, // 0
+  leftmost, // 1
+  rightmost, // 2
+  only, // 3
 }
 
 BoxDecoration makeNonControlDecoration(
@@ -38,7 +41,7 @@ BoxDecoration makeNonControlDecoration(
       // FIXME: For value for false in following ternary:
       // Fall back on Border's default value for 'right',
       // instead of hard-coding its current default value.
-      right: (location == ProfileContainerLocation.rightmost)
+      right: (location.index & ProfileContainerLocation.rightmost.index != 0)
           ? BorderSide(color: Colors.white30)
           : BorderSide.none,
     ),
@@ -54,12 +57,12 @@ BoxDecoration makeControlDecoration(
   return BoxDecoration(
     border: Border(
       left: BorderSide(
-        color: (location == ProfileContainerLocation.leftmost)
+        color: (location.index & ProfileContainerLocation.leftmost.index != 0)
             ? Colors.white30
             : Colors.black,
       ),
       right: BorderSide(
-        color: (location == ProfileContainerLocation.rightmost)
+        color: (location.index & ProfileContainerLocation.rightmost.index != 0)
             ? Colors.white30
             : Colors.black,
       ),
