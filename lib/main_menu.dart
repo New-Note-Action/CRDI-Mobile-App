@@ -46,15 +46,18 @@ class MainMenuClass extends StatelessWidget {
         drawer: DrawerSection(),
         body: Column(
           children: <Widget>[
-            Container(
-              child: Image(
+            Expanded(
+              flex: 1,
+              child: Container(
+                child: Image(
                   image: AssetImage(
                       "assets/Electronic-Component-Potentiometer.png"
                   ),
-                  height: 200.0
+                ),
               ),
             ),
             Expanded(
+              flex: 2,
               child: ListView.separated(
                 itemCount: _mainMenuItems.length,
                 separatorBuilder: (BuildContext context, int index) =>
