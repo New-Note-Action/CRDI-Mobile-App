@@ -25,14 +25,14 @@ class Profile3 extends StatelessWidget {
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.leftmost,
                     ),
-                    child: Container(
-                      margin: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
                       child: Text(
-                          'PROFILE: 03\n\n'
-                          'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
-                          style: TextStyle(color: Colors.white),
-                          textAlign: TextAlign.center),
-                      alignment: Alignment(0.0, 0.0),
+                        'PROFILE: 03\n\n'
+                        'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
@@ -132,7 +132,6 @@ class Profile3 extends StatelessWidget {
                       ],
                     ),
                     alignment: Alignment(0.0, 0.0),
-
                   ),
                 )
               ],
