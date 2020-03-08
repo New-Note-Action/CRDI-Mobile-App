@@ -127,7 +127,7 @@ class Profile3 extends StatelessWidget {
                       ],
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
