@@ -116,11 +116,8 @@ class Profile3 extends StatelessWidget {
                       location: ProfileContainerLocation.rightmost,
                     ),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Spacer(),
-//slider goes here
                         SliderExample(),
                         Spacer(),
                         Text(
@@ -129,7 +126,6 @@ class Profile3 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    alignment: Alignment(0.0, 0.0),
                   ),
                 )
               ],
