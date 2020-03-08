@@ -42,19 +42,20 @@ class Profile3 extends StatelessWidget {
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.rightmost,
                     ),
-                    height: double.infinity,
-                    child: IconButton(
-                      alignment: Alignment(0.0, 0.0),
-                      icon: Icon(Icons.pause_circle_outline),
-                      color: Colors.white,
-                      iconSize: MediaQuery.of(context).size.width * 0.1,
-                      onPressed: () {
-                        profilePauseDialog(context);
-                        print("Pause Button Hit");
-                      },
+                    child: SizedBox.expand(
+                      child: FittedBox(
+                        child: IconButton(
+                          icon: Icon(Icons.pause_circle_outline),
+                          color: Colors.white,
+                          onPressed: () {
+                            profilePauseDialog(context);
+                            print("Pause Button Hit");
+                          },
+                        ),
+                      ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -87,8 +88,7 @@ class Profile3 extends StatelessWidget {
                       location: ProfileContainerLocation.inner,
                     ),
                     child: Container(
-                      padding: const EdgeInsets.only(
-                          left: 10.0, right: 10.0),
+                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                       child: Column(
                         children: <Widget>[
                           Spacer(),
