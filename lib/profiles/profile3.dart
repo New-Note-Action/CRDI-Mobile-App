@@ -87,19 +87,17 @@ class Profile3 extends StatelessWidget {
                       location: ProfileContainerLocation.inner,
                     ),
                     child: Container(
-                      margin: const EdgeInsets.only(
-                          top: 3.0, left: 10.0, right: 10.0),
+                      padding: const EdgeInsets.only(
+                          left: 10.0, right: 10.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Spacer(),
-                          Container(
+                          FittedBox(
+                            fit: BoxFit.contain,
                             child: JoystickView(
                               iconsColor: Colors.white30,
                               backgroundColor: Colors.black54,
                               innerCircleColor: Color(0xFF222222),
-                              size: MediaQuery.of(context).size.width * 0.26,
                             ),
                           ),
                           Spacer(),
