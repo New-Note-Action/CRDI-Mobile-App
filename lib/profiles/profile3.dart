@@ -25,7 +25,7 @@ class Profile3 extends StatelessWidget {
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.leftmost,
                     ),
-                    padding: const EdgeInsets.all(10.0),
+                    padding: makeNonControlContainerPadding(),
                     child: Center(
                       child: Text(
                         'PROFILE: 03\n\n'
@@ -42,6 +42,7 @@ class Profile3 extends StatelessWidget {
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.rightmost,
                     ),
+                    padding: makeNonControlContainerPadding(),
                     child: SizedBox.expand(
                       child: FittedBox(
                         child: IconButton(
@@ -68,16 +69,16 @@ class Profile3 extends StatelessWidget {
                     decoration: makeControlDecoration(
                       location: ProfileContainerLocation.leftmost,
                     ),
+                    padding: makeControlContainerPadding(),
                     child: Column(
                       children: [
                         Spacer(),
                         AddButton(),
                         Spacer(),
                         Text(
-                          'Excited\n',
+                          'Excited',
                           style: TextStyle(color: Colors.white),
                         ),
-                        Spacer(),
                       ],
                     ),
                   ),
@@ -88,12 +89,11 @@ class Profile3 extends StatelessWidget {
                       location: ProfileContainerLocation.inner,
                     ),
                     child: Container(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                      padding: makeControlContainerPadding(padSides: true),
                       child: Column(
                         children: <Widget>[
                           Spacer(),
                           FittedBox(
-                            fit: BoxFit.contain,
                             child: JoystickView(
                               iconsColor: Colors.white30,
                               backgroundColor: Colors.black54,
@@ -102,7 +102,7 @@ class Profile3 extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            'Happiness\n',
+                            'Happiness',
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
@@ -115,13 +115,14 @@ class Profile3 extends StatelessWidget {
                     decoration: makeControlDecoration(
                       location: ProfileContainerLocation.rightmost,
                     ),
+                    padding: makeControlContainerPadding(),
                     child: Column(
                       children: <Widget>[
                         Spacer(),
                         SliderExample(),
                         Spacer(),
                         Text(
-                          'Tension\n',
+                          'Tension',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],

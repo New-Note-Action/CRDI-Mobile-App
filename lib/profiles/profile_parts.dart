@@ -80,6 +80,18 @@ final BoxDecoration profilePartControlDecoration = BoxDecoration(
   ),
 );
 
+EdgeInsets makeNonControlContainerPadding() {
+  return const EdgeInsets.all(10.0);
+}
+
+EdgeInsets makeControlContainerPadding({bool padSides = false}) {
+  return EdgeInsets.only(
+    left: padSides ? 19.0 : 0,
+    right: padSides ? 19.0 : 0,
+    bottom: 16.0,
+  );
+}
+
 void profilePauseDialog(context) {
   // flutter defined function
   showDialog(
