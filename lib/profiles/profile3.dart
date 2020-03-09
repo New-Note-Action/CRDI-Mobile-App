@@ -18,6 +18,7 @@ class Profile3 extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
                   flex: 8,
@@ -42,17 +43,16 @@ class Profile3 extends StatelessWidget {
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.rightmost,
                     ),
-                    padding: makeNonControlContainerPadding(),
-                    child: SizedBox.expand(
-                      child: FittedBox(
-                        child: IconButton(
-                          icon: Icon(Icons.pause_circle_outline),
-                          color: Colors.white,
-                          onPressed: () {
-                            profilePauseDialog(context);
-                            print("Pause Button Hit");
-                          },
-                        ),
+                    // No padding for this container.
+                    child: FittedBox(
+                      child: IconButton(
+                        icon: Icon(Icons.pause_circle_outline),
+                        color: Colors.white,
+                        padding: const EdgeInsets.only(),
+                        onPressed: () {
+                          profilePauseDialog(context);
+                          print("Pause Button Hit");
+                        },
                       ),
                     ),
                   ),
