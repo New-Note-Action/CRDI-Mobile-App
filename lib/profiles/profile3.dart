@@ -65,65 +65,101 @@ class Profile3 extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
+                  flex: 3,
                   child: Container(
                     decoration: makeControlDecoration(
                       location: ProfileContainerLocation.leftmost,
                     ),
-                    padding: makeControlContainerPadding(),
-                    child: Column(
-                      children: [
-                        Spacer(),
-                        AddButton(),
-                        Spacer(),
-                        Text(
-                          'Excited',
-                          style: TextStyle(color: Colors.white),
+                    padding: const EdgeInsets.all(5.0),
+                    child: Stack(
+                      fit: StackFit.passthrough,
+                      children: <Widget>[
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: const EdgeInsets.only(bottom: 10.0),
+                          child: Text(
+                            'Excited',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.center,
+                          child: FractionallySizedBox(
+                            widthFactor: 0.95,
+                            heightFactor: 0.95,
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints.expand(),
+                              child: AddButton(),
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ),
                 ),
                 Expanded(
+                  flex: 3,
                   child: Container(
                     decoration: makeControlDecoration(
-                      location: ProfileContainerLocation.inner,
+                      location: ProfileContainerLocation.leftmost,
                     ),
-                    child: Container(
-                      padding: makeControlContainerPadding(padSides: true),
-                      child: Column(
-                        children: <Widget>[
-                          Spacer(),
-                          FittedBox(
-                            child: JoystickView(
-                              iconsColor: Colors.white30,
-                              backgroundColor: Colors.black54,
-                              innerCircleColor: Color(0xFF222222),
-                            ),
-                          ),
-                          Spacer(),
-                          Text(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: const EdgeInsets.only(bottom: 10.0),
+                          child: Text(
                             'Happiness',
                             style: TextStyle(color: Colors.white),
                           ),
-                        ],
-                      ),
+                        ),
+                        Align(
+                          alignment: Alignment.center,
+                          child: FractionallySizedBox(
+                            widthFactor: 0.95,
+                            heightFactor: 0.95,
+                            child: FittedBox(
+                              child: JoystickView(
+                                iconsColor: Colors.white30,
+                                backgroundColor: Colors.black54,
+                                innerCircleColor: Color(0xFF222222),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
                 Expanded(
+                  flex: 3,
                   child: Container(
                     decoration: makeControlDecoration(
-                      location: ProfileContainerLocation.rightmost,
+                      location: ProfileContainerLocation.leftmost,
                     ),
-                    padding: makeControlContainerPadding(),
-                    child: Column(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Stack(
+                      fit: StackFit.passthrough,
                       children: <Widget>[
-                        Spacer(),
-                        SliderExample(),
-                        Spacer(),
-                        Text(
-                          'Tension',
-                          style: TextStyle(color: Colors.white),
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: const EdgeInsets.only(bottom: 10.0),
+                          child: Text(
+                            'Tension',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.center,
+                          child: FractionallySizedBox(
+                            widthFactor: 0.95,
+                            heightFactor: 0.95,
+                            child: FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: SliderExample(),
+                            ),
+                          ),
                         ),
                       ],
                     ),
