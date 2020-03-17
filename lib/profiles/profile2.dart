@@ -66,7 +66,7 @@ class Profile2 extends StatelessWidget {
                 child: Column(
                   children: [
                     Spacer(),
-                    SwitchExample(),
+                    //SwitchExample(),
                     Spacer(),
                     Text(
                       'Excited\n',
@@ -125,7 +125,7 @@ class Profile2 extends StatelessWidget {
                   children: <Widget>[
                     Spacer(),
                     //slider goes here
-                    SliderExample(),
+                    //SliderExample(),
                     Spacer(),
                     Text(
                       'Tension\n',

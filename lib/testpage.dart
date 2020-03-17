@@ -32,7 +32,7 @@ import 'package:crdi_mobile_app/profiles/profile5.dart';
 class TestingPage extends StatelessWidget {
   //int _value = 1;
 
-  int profile = 2;
+  int profile = 1;
 
   int joystickX = 0;
   int joystickY = 0;

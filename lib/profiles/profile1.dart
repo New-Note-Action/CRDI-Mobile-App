@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:control_pad/control_pad.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:crdi_mobile_app/inputs/button.dart';
+import 'package:crdi_mobile_app/inputs/switch.dart';
 import 'package:crdi_mobile_app/inputs/slider.dart';
+import 'package:crdi_mobile_app/inputs/empty_input.dart';
+import 'package:crdi_mobile_app/inputs/joystick.dart';
 import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
 class Profile1 extends StatelessWidget {
@@ -56,84 +58,9 @@ class Profile1 extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                decoration: makeControlDecoration(
-                  location: ProfileContainerLocation.leftmost,
-                ),
-                width: ScreenUtil.screenWidthDp * 0.333,
-                height: ScreenUtil.screenHeightDp * 0.6,
-                child: Column(
-                  children: [
-                    Spacer(),
-                    AddButton(),
-                    Spacer(),
-                    Text(
-                      'Excited\n',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    Spacer(),
-                  ],
-                ),
-              ),
-              Container(
-                decoration: makeControlDecoration(
-                  location: ProfileContainerLocation.inner,
-                ),
-                width: ScreenUtil.screenWidthDp * 0.334,
-                height: ScreenUtil.screenHeightDp * 0.6,
-                child: Container(
-                  margin:
-                      const EdgeInsets.only(top: 3.0, left: 10.0, right: 10.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Spacer(),
-                      Container(
-                        child: JoystickView(
-                          iconsColor: Colors.white30,
-                          backgroundColor: Colors.black54,
-                          innerCircleColor: Color(0xFF222222),
-                          size: (ScreenUtil.screenWidthDp * 0.26 <
-                                  ScreenUtil.screenHeightDp *
-                                      0.5) //Check if quarter width is less than half height
-                              ? ScreenUtil.screenWidthDp *
-                                  0.26 //If it is, set the size to quarter width
-                              : ScreenUtil.screenHeightDp *
-                                  0.5, //Else, set the size to half height
-                        ),
-                      ),
-                      Spacer(),
-                      Text(
-                        'Happiness\n',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                decoration: makeControlDecoration(
-                  location: ProfileContainerLocation.rightmost,
-                ),
-                width: ScreenUtil.screenWidthDp * 0.333,
-                height: ScreenUtil.screenHeightDp * 0.6,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Spacer(),
-                    //slider goes here
-                    SliderExample(),
-                    Spacer(),
-                    Text(
-                      'Tension\n',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ],
-                ),
-                alignment: Alignment(0.0, 0.0),
-              ),
+              HorizontalSwitchInput(label: 'test'),
+              VerticalSwitchInput(label: 'test'),
+              JoystickInput(label: 'test'),
             ],
           ),
         ],
