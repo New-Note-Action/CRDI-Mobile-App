@@ -62,12 +62,22 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case Ready:
       landscapeMode();
       return MaterialPageRoute(
-        builder: (context) => ReadyPage(),
+        builder: (context) => WillPopScope(
+          onWillPop: () {
+            return;
+          },
+          child: ReadyPage(),
+        ),
       );
     case Testing:
       landscapeMode();
       return MaterialPageRoute(
-        builder: (context) => TestingPage(),
+        builder: (context) => WillPopScope(
+          onWillPop: () {
+            return;
+          },
+          child: TestingPage(),
+        ),
       );
     default:
       enableRotation();
