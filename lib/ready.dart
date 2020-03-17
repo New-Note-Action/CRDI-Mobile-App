@@ -25,11 +25,11 @@
 import 'package:crdi_mobile_app/core/config.dart';
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
-import 'package:crdi_mobile_app/drawer.dart';
-import 'package:crdi_mobile_app/core/topbar.dart';
+//import 'package:crdi_mobile_app/drawer.dart';
+//import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:flutter/widgets.dart';
 
-class readyPage extends StatelessWidget {
+class ReadyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,11 @@ class readyPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('\nTest [ID]:\nPress "Start" to begin', style: Theme.of(context).textTheme.display1,textAlign: TextAlign.center,),
+            Text(
+              '\nTest [ID]:\nPress "Start" to begin',
+              style: Theme.of(context).textTheme.display1,
+              textAlign: TextAlign.center,
+            ),
             Divider(),
             Spacer(),
             RaisedButton(

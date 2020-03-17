@@ -58,7 +58,7 @@ class Profile5 extends StatelessWidget {
                 ),
                 width: MediaQuery.of(context).size.width * 0.333,
                 height: MediaQuery.of(context).size.height * 0.6,
-                child: AddButton(),
+                //child: AddButton(),
               ),
               Container(
                 decoration: makeControlDecoration(
@@ -108,7 +108,7 @@ class Profile5 extends StatelessWidget {
                   children: <Widget>[
                     Spacer(),
 //slider goes here
-                    SliderExample(),
+                    //SliderExample(),
                     Spacer(),
                     Text(
                       'Tension\n',

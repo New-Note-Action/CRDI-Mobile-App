@@ -15,53 +15,53 @@ class Profile3 extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Column(
         children: <Widget>[
-          Expanded(
+          Flexible(
             flex: 4,
+            fit: FlexFit.tight,
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
-                  flex: 8,
+                  flex: 7,
                   child: Container(
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.leftmost,
                     ),
-                    padding: makeNonControlContainerPadding(),
-                    child: Center(
+                    child: Container(
+                      margin: const EdgeInsets.all(10.0),
                       child: Text(
-                        'PROFILE: 03\n\n'
-                        'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
-                        style: TextStyle(color: Colors.white),
-                        textAlign: TextAlign.center,
-                      ),
+                          'PROFILE: 03\n\n'
+                          'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
+                          style: TextStyle(color: Colors.white),
+                          textAlign: TextAlign.center),
+                      alignment: Alignment(0.0, 0.0),
                     ),
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Container(
                     decoration: makeNonControlDecoration(
                       location: ProfileContainerLocation.rightmost,
                     ),
-                    // No padding for this container.
-                    child: FittedBox(
-                      child: IconButton(
-                        icon: Icon(Icons.pause_circle_outline),
-                        color: Colors.white,
-                        padding: const EdgeInsets.only(),
-                        onPressed: () {
-                          profilePauseDialog(context);
-                          print("Pause Button Hit");
-                        },
-                      ),
+                    height: double.infinity,
+                    child: IconButton(
+                      alignment: Alignment(0.0, 0.0),
+                      icon: Icon(Icons.pause_circle_outline),
+                      color: Colors.white,
+                      iconSize: MediaQuery.of(context).size.width * 0.1,
+                      onPressed: () {
+                        profilePauseDialog(context);
+                        print("Pause Button Hit");
+                      },
                     ),
                   ),
-                ),
+                )
               ],
             ),
           ),
-          Expanded(
+          Flexible(
             flex: 6,
+            fit: FlexFit.tight,
             child: Row(
               children: [
                 Expanded(
@@ -69,16 +69,16 @@ class Profile3 extends StatelessWidget {
                     decoration: makeControlDecoration(
                       location: ProfileContainerLocation.leftmost,
                     ),
-                    padding: makeControlContainerPadding(),
                     child: Column(
                       children: [
                         Spacer(),
-                        AddButton(),
+                        //AddButton(),
                         Spacer(),
                         Text(
-                          'Excited',
+                          'Excited\n',
                           style: TextStyle(color: Colors.white),
                         ),
+                        Spacer(),
                       ],
                     ),
                   ),
@@ -89,20 +89,24 @@ class Profile3 extends StatelessWidget {
                       location: ProfileContainerLocation.inner,
                     ),
                     child: Container(
-                      padding: makeControlContainerPadding(padSides: true),
+                      margin: const EdgeInsets.only(
+                          top: 3.0, left: 10.0, right: 10.0),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Spacer(),
-                          FittedBox(
+                          Container(
                             child: JoystickView(
                               iconsColor: Colors.white30,
                               backgroundColor: Colors.black54,
                               innerCircleColor: Color(0xFF222222),
+                              size: MediaQuery.of(context).size.width * 0.26,
                             ),
                           ),
                           Spacer(),
                           Text(
-                            'Happiness',
+                            'Happiness\n',
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
@@ -115,20 +119,24 @@ class Profile3 extends StatelessWidget {
                     decoration: makeControlDecoration(
                       location: ProfileContainerLocation.rightmost,
                     ),
-                    padding: makeControlContainerPadding(),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Spacer(),
-                        SliderExample(),
+//slider goes here
+                        //SliderExample(),
                         Spacer(),
                         Text(
-                          'Tension',
+                          'Tension\n',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
                     ),
+                    alignment: Alignment(0.0, 0.0),
+
                   ),
-                ),
+                )
               ],
             ),
           ),
