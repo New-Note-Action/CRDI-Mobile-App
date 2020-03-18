@@ -29,7 +29,12 @@ class MainMenuClass extends StatelessWidget {
   final List<ListTile> _mainMenuItems = <ListTile>[
     ListTile(
       title: Text("New Test"),
-      onTap: () => Navigator.pushNamed(_theContext, ProfileSelect),
+      onTap: () {
+        Navigator.pushNamed(_theContext, ProfileSelect);
+        profileName = '';
+        profileID = 0;
+        testID = '';
+      },
     ),
     ListTile(
       title: Text("Export Results"),
@@ -51,8 +56,7 @@ class MainMenuClass extends StatelessWidget {
               child: Container(
                 child: Image(
                   image: AssetImage(
-                      "assets/Electronic-Component-Potentiometer.png"
-                  ),
+                      "assets/Electronic-Component-Potentiometer.png"),
                 ),
               ),
             ),

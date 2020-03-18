@@ -53,7 +53,7 @@ class _ShareMenuState extends State<ShareMenu> {
   Future<String> getFilePath() async {
     try {
       String filePath = await FilePicker.getFilePath(
-        type: FileType.CUSTOM,
+        type: FileType.custom,
         fileExtension: 'pdf',
       );
       if (filePath == '') {

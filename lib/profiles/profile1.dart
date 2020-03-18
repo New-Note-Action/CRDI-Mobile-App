@@ -9,6 +9,9 @@ import 'package:crdi_mobile_app/inputs/joystick.dart';
 import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
 class Profile1 extends StatelessWidget {
+  final String name;
+
+  Profile1({this.name = 'Profile 1'});
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, allowFontScaling: false);
@@ -29,7 +32,7 @@ class Profile1 extends StatelessWidget {
                 child: Container(
                   margin: const EdgeInsets.all(10.0),
                   child: Text(
-                      'PROFILE: 01\n\n'
+                      name + '\n\n'
                       'Respond to the music by doing xyz, abc, and asdf.  Make sure that you check out the ABCDEFG when you XYZ.',
                       style: TextStyle(color: Colors.white),
                       textAlign: TextAlign.center),
@@ -58,9 +61,9 @@ class Profile1 extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HorizontalSwitchInput(label: 'test'),
-              VerticalSwitchInput(label: 'test'),
-              JoystickInput(label: 'test'),
+              EmptyInput(),
+              VerticalSliderInput(label: 'this is a label'),
+              EmptyInput(),
             ],
           ),
         ],

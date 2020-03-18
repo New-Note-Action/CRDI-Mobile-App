@@ -25,8 +25,6 @@
 import 'package:crdi_mobile_app/core/config.dart';
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
-//import 'package:crdi_mobile_app/drawer.dart';
-//import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:flutter/widgets.dart';
 
 class ReadyPage extends StatelessWidget {
@@ -34,14 +32,13 @@ class ReadyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      //appBar: TopAppBar("Test [ID]", true),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              '\nTest [ID]:\nPress "Start" to begin',
+              '\n' + profileName + ':\nPress "Start" to begin',
               style: Theme.of(context).textTheme.display1,
               textAlign: TextAlign.center,
             ),

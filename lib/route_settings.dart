@@ -27,9 +27,36 @@ const String Legal = 'Legal Information';
 const String Ready = 'Ready to Begin';
 const String Testing = 'Take a Test';
 
-class TestArgs {
-  final String testName;
-  final int testNum;
-  TestArgs(this.testName, this.testNum);
+int profileID = 0;
+String profileName = '';
+String testID = '';
+Profile test;
+
+class Profile {
+  final int id;
+  final String layout;
+
+  Profile(this.id, this.layout);
+
+  static List<Profile> getProfiles() {
+    return <Profile>[
+      Profile(1,'VS'),
+      Profile(2,'HS'),
+      Profile(3,'J'),
+      Profile(4,'T'),
+      Profile(5,'HS|VS'),
+      Profile(6,'J|VS'),
+      Profile(7,'B'),
+      Profile(8,'B|B'),
+      Profile(9,'B|B|B'),
+      Profile(10,'VS|B'),
+      Profile(11,'J|B'),
+      Profile(12,'VS|J'),
+      Profile(13,'HS|J'),
+      Profile(14,'T|VS'),
+      Profile(15,'T|HS'),
+      Profile(16,'T|J'),
+      Profile(17,'T|T|T'),
+    ];
+  }
 }
-//TODO Individual Routes for separate Profiles?
