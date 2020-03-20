@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:crdi_mobile_app/inputs/slider.dart';
-import 'package:crdi_mobile_app/inputs/empty_input.dart';
+import 'package:crdi_mobile_app/inputs/switch.dart';
 import 'package:crdi_mobile_app/profiles/profile_parts.dart';
 
-class Profile5 extends StatelessWidget {
+class Profile17 extends StatelessWidget {
   final String name;
 
-  Profile5({this.name = 'Profile 5'});
+  Profile17({this.name = 'Profile 17'});
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, allowFontScaling: false);
@@ -57,9 +56,9 @@ class Profile5 extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HorizontalSliderInput(label: 'this is a label'),
-              EmptyInput(),
-              VerticalSliderInput(label: 'this is a label'),
+              VerticalSwitchInput(label: 'this is a label'),
+              VerticalSwitchInput(label: 'this is a label'),
+              VerticalSwitchInput(label: 'this is a label'),
             ],
           ),
         ],
