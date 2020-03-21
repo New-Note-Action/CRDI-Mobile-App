@@ -17,7 +17,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  path_provider: ^0.4.1
+  # TODO: Upgrade path_provider once simple_share doesn't depend on version ^0.4.1 anymore
+  path_provider: 1.6.4
   control_pad: ^1.0.0+2
   flutter:
     sdk: flutter
