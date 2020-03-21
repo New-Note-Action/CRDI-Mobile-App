@@ -32,6 +32,7 @@ dependencies:
   simple_share:
     git:
       url: https://github.com/giandifra/simple_share.git
+      ref: 94eb4cf307e161f56808c6b51f8a82f0bffaab41
   file_picker: ^1.5.0+2
   flutter_screenutil: ^1.0.2
   vibration: 1.2.4

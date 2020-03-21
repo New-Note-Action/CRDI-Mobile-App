@@ -53,6 +53,8 @@ class TestingPage extends StatelessWidget {
 
 
   var testing123 = writeInput("asdf hello");
+  var testing1234 = writeInput("asdf hello");
+
 
 
 
@@ -62,7 +64,8 @@ class TestingPage extends StatelessWidget {
   @override
   // ignore: missing_return
   Widget build(BuildContext context) {
-
+    print(testing123.toString());
+    print(fileName);
     switch(profileID) {
       case 1: {
         return Profile1();

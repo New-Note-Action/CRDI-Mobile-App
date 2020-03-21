@@ -251,8 +251,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: "03069451c0b447286f4d98c9e399c3ad1e9e8d59"
+      ref: "94eb4cf307e161f56808c6b51f8a82f0bffaab41"
+      resolved-ref: "94eb4cf307e161f56808c6b51f8a82f0bffaab41"
       url: "https://github.com/giandifra/simple_share.git"
     source: git
     version: "0.0.1+4"
