@@ -17,7 +17,6 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  # TODO: Upgrade path_provider once simple_share doesn't depend on version ^0.4.1 anymore
   path_provider: 1.6.4
   control_pad: ^1.0.0+2
   flutter:
@@ -30,7 +29,9 @@ dependencies:
   flutter_markdown: ^0.3.0
   #flutter_html: ^0.11.0
   #webview_flutter: ^0.3.15+1
-  simple_share: ^0.0.1+4
+  simple_share:
+    git:
+      url: https://github.com/giandifra/simple_share.git
   file_picker: ^1.5.0+2
   flutter_screenutil: ^1.0.2
   vibration: 1.2.4
