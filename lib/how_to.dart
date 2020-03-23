@@ -19,6 +19,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'dart:async' show Future;
 //import 'package:flutter/services.dart' show rootBundle;
@@ -30,22 +31,28 @@ import 'package:crdi_mobile_app/drawer.dart';
 class HowToClass extends StatelessWidget {
   Future<String> _getStringOfHowToFile(BuildContext context) async {
     return await DefaultAssetBundle.of(context)
-        .loadString("assets/howtouse.md");
+        .loadString("assets/howto/howtouse.html");
   }
 
   @override
   Widget build(BuildContext buildContext) {
     return FutureBuilder(
-        future: _getStringOfHowToFile(buildContext),
-        builder: (BuildContext context, AsyncSnapshot<String> text) {
-          return SafeArea(
-            child: Scaffold(
-              appBar: TopAppBar("How To", true),
-              drawer: DrawerSection(),
-              bottomNavigationBar: BottomNavBar(false),
-              body: Markdown(data: text.data),
+      future: _getStringOfHowToFile(buildContext),
+      builder: (BuildContext context, AsyncSnapshot<String> text) {
+        return SafeArea(
+          child: Scaffold(
+            appBar: TopAppBar("How To", true),
+            drawer: DrawerSection(),
+            bottomNavigationBar: BottomNavBar(false),
+            body: SingleChildScrollView(
+              child: Html(
+                padding: const EdgeInsets.all(5.0),
+                data: text.data.toString(),
+              ),
             ),
-          );
-        });
+          ),
+        );
+      },
+    );
   }
 }
