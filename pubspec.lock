@@ -222,9 +222,11 @@ packages:
   simple_share:
     dependency: "direct main"
     description:
-      name: simple_share
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: "94eb4cf307e161f56808c6b51f8a82f0bffaab41"
+      resolved-ref: "94eb4cf307e161f56808c6b51f8a82f0bffaab41"
+      url: "https://github.com/giandifra/simple_share.git"
+    source: git
     version: "0.0.1+4"
   sky_engine:
     dependency: transitive

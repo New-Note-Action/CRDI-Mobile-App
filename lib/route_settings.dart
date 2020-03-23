@@ -32,7 +32,8 @@ const String Testing = 'Take a Test';
 
 int profileID = 0;
 String profileName = '';
-String testID = '0000';
+String testID = '';
+String fileName = '';
 Profile test;
 
 
@@ -45,6 +46,7 @@ Future<String> get _localPath async {
 Future<File> get _localFile async {
   final path = await _localPath;
   var now = new DateTime.now();
+  fileName = '$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv';
   print('$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv');
   return File('$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv');
 }

@@ -20,9 +20,9 @@
 
 //TODO Edit to be specific to this project
 
+import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-//import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/drawer.dart';
 import 'package:file_picker/file_picker.dart';
@@ -75,12 +75,17 @@ class _ShareMenuState extends State<ShareMenu> {
         children: <Widget>[
           RaisedButton(
             onPressed: () {
-              SimpleShare.share(
-                title: "DR.C Test Results",
-                msg:
-                    "Attached are the results for test [ID]\n\nSent via DR.C app",
-                subject: "Test [ID] Results",
-              );
+                final uri = Uri.file(fileName);
+                print(fileName);
+                print(uri.toString());
+                SimpleShare.share(
+                  uri: uri.toString(),
+                  title: "DR.C Test Results",
+                  msg:
+                  "Attached are the results for test [ID]\n\nSent via DR.C app",
+                  subject: "Test [ID] Results",
+                );
+              print('file shared!!!');
             },
             child: Text('Submit this test'),
           ),
@@ -89,7 +94,10 @@ class _ShareMenuState extends State<ShareMenu> {
               final path = await getFilePath();
               if (path != null && path.isNotEmpty) {
                 final uri = Uri.file(path);
-                SimpleShare.share(
+                print('Preparing to Share');
+                print(path);
+                print(uri.toString());
+                await SimpleShare.share(
                   uri: uri.toString(),
                   title: "DR.C Test Results",
                   msg:
