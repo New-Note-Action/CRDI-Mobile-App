@@ -65,6 +65,7 @@ flutter:
     # Image released into Public Domain, thus no attribution required (add it later though).
     - assets/Electronic-Component-Potentiometer.png
     - assets/howtouse.md
+    - assets/howto/
     - assets/icon/png/
     - LICENSE_LicenseNotice
 
