@@ -35,7 +35,7 @@ class AboutClass extends StatelessWidget {
 
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     return LicensePage(
-      applicationName: packageInfo.appName,
+      applicationName: "DRC (Digital Response Capture)",
       applicationVersion: "Version " + packageInfo.version,
       applicationLegalese: _licenseNotice,
       //pageTitle: "About", // From tinkering with Flutters's about.dart

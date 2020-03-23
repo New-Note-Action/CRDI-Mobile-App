@@ -47,7 +47,7 @@ class MainMenuClass extends StatelessWidget {
     _theContext = buildContext;
     return SafeArea(
       child: Scaffold(
-        appBar: TopAppBar("CRDI Mobile App", true),
+        appBar: TopAppBar("DRC", true),
         drawer: DrawerSection(),
         body: Column(
           children: <Widget>[

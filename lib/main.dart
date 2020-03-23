@@ -104,7 +104,7 @@ class CRDIApp extends StatelessWidget {
       ),
       themedWidgetBuilder: (context, theme) {
         return MaterialApp(
-          title: 'CRDI Mobile App',
+          title: 'DRC',
           theme: theme,
           onGenerateRoute: router.generateRoute,
           initialRoute: MainMenu,
