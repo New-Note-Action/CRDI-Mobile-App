@@ -54,9 +54,10 @@ class MainMenuClass extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 5.0),
                 child: Image(
                   image: AssetImage(
-                      "assets/Electronic-Component-Potentiometer.png"),
+                      "assets/icon/png/drc.png"),
                 ),
               ),
             ),

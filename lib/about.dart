@@ -40,7 +40,7 @@ class AboutClass extends StatelessWidget {
       applicationLegalese: _licenseNotice,
       //pageTitle: "About", // From tinkering with Flutters's about.dart
       applicationIcon: Image(
-        image: AssetImage("assets/Electronic-Component-Potentiometer.png"),
+        image: AssetImage("assets/icon/png/drc.png"),
         height: 72.0,
         width: 72.0,
       ),
