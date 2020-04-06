@@ -17,9 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-import 'package:path_provider/path_provider.dart';
-import 'dart:async';
-import 'dart:io';
+
 //TODO Edit String Values to be more descriptive in case of errors?
 const String MainMenu = 'Main Menu';
 const String ProfileSelect = 'Profile Selection Screen';
@@ -38,24 +36,7 @@ Profile test;
 
 
 
-Future<String> get _localPath async {
-  final directory = await getApplicationDocumentsDirectory();
 
-  return directory.path;
-}
-Future<File> get _localFile async {
-  final path = await _localPath;
-  var now = new DateTime.now();
-  fileName = '$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv';
-  print('$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv');
-  return File('$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv');
-}
-Future<File> writeInput(String input) async {
-  final file = await _localFile;
-
-  // Write the file.
-  return file.writeAsString(input);
-}
 
 
 class Profile {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:crdi_mobile_app/testpage.dart';
 
 class SliderInputState extends State<SliderInput> {
   int _value = 1;
@@ -17,6 +18,8 @@ class SliderInputState extends State<SliderInput> {
                 inactiveColor: Colors.black,
                 //label: _value.toString(),
                 onChanged: (double newValue) {
+                  var now = new DateTime.now();
+                  writeInput(("slider.label" + "," + _value.toString() + "," + now.toIso8601String() + ",,"));
                   setState(() {
                     _value = newValue.round();
                     print(_value);

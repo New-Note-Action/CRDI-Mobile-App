@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:crdi_mobile_app/vibrate.dart';
+import 'package:crdi_mobile_app/testpage.dart';
 
 class ButtonInput extends StatelessWidget {
   final String label;
@@ -19,7 +20,10 @@ class ButtonInput extends StatelessWidget {
           Spacer(),
           Listener(
             onPointerDown: (details) async {
+
               VibrateDevice();
+              var now = new DateTime.now();
+              writeInput((label + "," + "Pressed," + now.toIso8601String() + ",,"));
               pressed = 1;
               numPressed = numPressed +
                   1; //Every Clock Cycle, this variable will reset to 0.
@@ -33,6 +37,8 @@ class ButtonInput extends StatelessWidget {
             },
             onPointerUp: (details) async {
               pressed = 0;
+              var now = new DateTime.now();
+              writeInput((label + "," + "Released," + now.toIso8601String()));
               print("Button Unpressed. " + pressed.toString());
 //A function to either write this data to the file OR write it to a data structure would go here
             },

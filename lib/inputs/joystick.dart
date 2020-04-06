@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:control_pad/control_pad.dart';
+import 'package:crdi_mobile_app/testpage.dart';
 
 /*
     Copyright (C) 2019-2020 "New Note Action" (John Elik, Cole Howard,
@@ -34,6 +35,10 @@ class JoystickInput extends StatelessWidget {
         children: <Widget>[
           Spacer(),
           JoystickView(
+            onDirectionChanged: (angle, distance) {
+              var now = new DateTime.now();
+              writeInput((label + "," + angle.toString() + "," + distance.toString() + "," + now.toIso8601String() + ",,"));
+            },
             iconsColor: Colors.white30,
             backgroundColor: Colors.black54,
             innerCircleColor: Color(0xFF222222),

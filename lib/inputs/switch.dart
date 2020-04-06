@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:crdi_mobile_app/testpage.dart';
 
 class SwitchInputState extends State<SwitchInput> {
   bool _beginValue = true;
@@ -14,6 +15,8 @@ class SwitchInputState extends State<SwitchInput> {
             child: Switch(
               value: _beginValue,
               onChanged: (bool newValue) {
+                var now = new DateTime.now();
+                writeInput(("switch.label" + "," + "toggled," + now.toIso8601String() + ",,"));
                 setState(
                   () {
                     _beginValue = newValue;
