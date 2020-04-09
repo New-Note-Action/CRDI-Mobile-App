@@ -24,8 +24,13 @@ import 'package:crdi_mobile_app/route_settings.dart';
 import 'package:crdi_mobile_app/core/topbar.dart';
 import 'package:crdi_mobile_app/drawer.dart';
 
+resetFileName(){
+  fileName = 'asdf';
+}
+
 class MainMenuClass extends StatelessWidget {
   static BuildContext _theContext;
+
   final List<ListTile> _mainMenuItems = <ListTile>[
     ListTile(
       title: Text("New Test"),
