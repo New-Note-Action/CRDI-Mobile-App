@@ -51,10 +51,15 @@ Future<String> get _localPath async {
 }
 Future<File> get _localFile async {
   final path = await _localPath;
-  var now = new DateTime.now();
-  fileName = '$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv';
-  print('$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv');
-  return File('$path' + '/' + now.toIso8601String() + '_' + '$testID' + '.csv');
+  if(fileName != 'asdf'){
+
+  }else {
+    var now = new DateTime.now();
+    fileName = now.toIso8601String() + '_' + '$testID' + '.csv';
+  }
+  fileName = '$path' + '/' + fileName;
+  print('$path' + '/' + fileName);
+  return File('$path' + '/' + fileName);
 }
 Future<File> writeInput(String input) async {
   final file = await _localFile;
