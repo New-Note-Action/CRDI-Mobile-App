@@ -78,7 +78,7 @@ class Profile2 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EmptyInput(),
-              HorizontalSliderInput(label: 'this is a label'),
+              HorizontalSliderInput(label: 'Horizontal Slider'),
               EmptyInput(),
             ],
           ),

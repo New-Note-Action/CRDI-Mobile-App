@@ -78,7 +78,7 @@ class Profile3 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EmptyInput(),
-              JoystickInput(label: 'this is a label'),
+              JoystickInput(label: 'Joystick'),
               EmptyInput(),
             ],
           ),

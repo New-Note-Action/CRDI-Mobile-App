@@ -78,9 +78,9 @@ class Profile6 extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              JoystickInput(label: 'this is a label'),
+              JoystickInput(label: 'Joystick'),
               EmptyInput(),
-              VerticalSliderInput(label: 'this is a label'),
+              VerticalSliderInput(label: 'Vertical Slider'),
             ],
           ),
         ],

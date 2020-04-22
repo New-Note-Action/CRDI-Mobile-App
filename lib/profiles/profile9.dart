@@ -76,9 +76,9 @@ class Profile9 extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ButtonInput(label: 'this is a label'),
-              ButtonInput(label: 'this is a label'),
-              ButtonInput(label: 'this is a label'),
+              ButtonInput(label: 'Button 1'),
+              ButtonInput(label: 'Button 2'),
+              ButtonInput(label: 'Button 3'),
             ],
           ),
         ],

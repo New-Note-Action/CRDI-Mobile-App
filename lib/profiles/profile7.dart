@@ -78,7 +78,7 @@ class Profile7 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EmptyInput(),
-              ButtonInput(label: 'this is a label'),
+              ButtonInput(label: 'Button'),
               EmptyInput(),
             ],
           ),
