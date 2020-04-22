@@ -22,6 +22,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:crdi_mobile_app/route_settings.dart';
 
+const String defaultProfileInstructions =
+    "Follow the instructions as provided by your teacher, instructor, or proctor.";
+
 enum ProfileContainerLocation {
   // Do not reorder these; the values for these enums are used in bitwise
   // operations when generating borders.
