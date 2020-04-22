@@ -36,7 +36,15 @@ class SelectProfile extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Spacer(),
-              //TextField
+              TextField(
+                obscureText: false,
+                decoration: InputDecoration(
+                  labelText: 'Test ID',
+                ),
+                onChanged: (id) {
+                  testID = id;
+                },
+              ),
               Spacer(),
               ProfileDropDown(),
               Spacer(),

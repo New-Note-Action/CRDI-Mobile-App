@@ -61,21 +61,6 @@ class _DrawerSectionState extends State<DrawerSection> {
               ); //setState
             }, //onChanged
           ),
-          SwitchListTile(
-            title: Text('Theme'),
-            value: (DynamicTheme.of(context).brightness == Brightness.dark),
-            onChanged: (bool newValue) {
-              setState(
-                    () {
-                  if(DynamicTheme.of(context).brightness == Brightness.dark) {
-                    DynamicTheme.of(context).setBrightness(Brightness.light);
-                  } else {
-                    DynamicTheme.of(context).setBrightness(Brightness.dark);
-                  }
-                },
-              ); //setState
-            },
-          ),
           ListTile(
             title: Text('About and Legal'),
             onTap: () {

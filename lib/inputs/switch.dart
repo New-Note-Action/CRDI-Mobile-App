@@ -9,8 +9,8 @@ class SwitchInputState extends State<SwitchInput> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Expanded(
-          child: SizedBox(
+        //Expanded(
+          SizedBox(
             width: .1 * ScreenUtil.screenWidthDp,
             child: Switch(
               value: _beginValue,
@@ -25,7 +25,7 @@ class SwitchInputState extends State<SwitchInput> {
               },
             ),
           ),
-        ),
+        //),
       ],
     );
   }
