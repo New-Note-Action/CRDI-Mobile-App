@@ -86,6 +86,8 @@ class BottomNavBar extends StatelessWidget {
                   ),
                   onPressed: () {
                     VibrateDevice();
+                    print(profileName);
+                    print(testID);
                     Navigator.pushNamed(context, Ready);
                   },
                 ),
@@ -141,7 +143,10 @@ class BottomNavBar extends StatelessWidget {
               children: <Widget>[
                 IconButton(
                   iconSize: iconSizeOnScreen,
-                  icon: Icon(Icons.pregnant_woman),
+                  icon: Icon(
+                    Icons.pregnant_woman,
+                    color: Color(0x00000000),
+                  ),
                   onPressed: () {},
                 ),
               ],
